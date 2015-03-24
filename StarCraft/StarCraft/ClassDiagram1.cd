@@ -1,100 +1,226 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StarCraft.Engine.CommandsConstant" Collapsed="true">
+    <Position X="33.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAACAAAAAAAAAAAAAAAACAACAACABABAAAAAAAA=</HashCode>
+      <FileName>Engine\CommandsConstant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarCraft.Engine.StarCraftEngine" Collapsed="true">
+    <Position X="35.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAACAAAAAAAAAgAAAAACAACAAAAAACEQAAAgAI=</HashCode>
+      <FileName>Engine\StarCraftEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="StarCraft.GameObject.Building" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+    <Position X="32" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameObject\Building.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StarCraft.GameObject.GameObject" Collapsed="true">
-    <Position X="1.75" Y="0.5" Width="1.5" />
+    <Position X="17" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ARAACACACIEAgACgAAAIAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>GameObject\GameObject.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="StarCraft.GameObject.KayboardInterface" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\KayboardInterface.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
   <Class Name="StarCraft.GameObject.MovingObject" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
+    <Position X="17" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>GameObject\MovingObject.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.GameObject.Player" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+  <Class Name="StarCraft.GameObject.Player" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>MAAAAAAAAAAABAAQAAIAAAAAAAAUAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AiBGgAIk0CAABgAAAAIAAAQAAQAEAAAAACAAQABABAA=</HashCode>
       <FileName>GameObject\Player.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="StarCraft.GameObject.Position" Collapsed="true">
-    <Position X="7" Y="0.5" Width="1.5" />
+    <Position X="33.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
       <FileName>GameObject\Position.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StarCraft.GameObject.Unit" Collapsed="true">
-    <Position X="2.75" Y="3.25" Width="1.5" />
+    <Position X="17" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameObject\Unit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="StarCraft.StarCraftMain" Collapsed="true">
-    <Position X="5.25" Y="1.5" Width="1.5" />
+  <Class Name="StarCraft.Units.Races.Protoss.Fighters.Colossus" Collapsed="true">
+    <Position X="9.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>StarCraftMain.cs</FileName>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Protoss\Fighters\Colossus.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Protoss.Fighters.Dragoon" Collapsed="true">
+    <Position X="7" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Protoss\Fighters\Dragoon.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Protoss.Fighters.Zealot" Collapsed="true">
+    <Position X="13.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Protoss\Fighters\Zealot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Protoss.Workers.Probe" Collapsed="true">
+    <Position X="18.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Protoss\Workers\Probe.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Terran.Fighters.Firebat" Collapsed="true">
+    <Position X="22.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Terran\Fighters\Firebat.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Terran.Fighters.Goliath" Collapsed="true">
+    <Position X="27.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Terran\Fighters\Goliath.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Terran.Fighters.Marine" Collapsed="true">
+    <Position X="4.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Terran\Fighters\Marine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Terran.Workers.SCV" Collapsed="true">
+    <Position X="11.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Terran\Workers\SCV.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Zerg.Fighters.Guardian" Collapsed="true">
+    <Position X="16" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Zerg\Fighters\Guardian.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Zerg.Fighters.Zergling" Collapsed="true">
+    <Position X="20.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Zerg\Fighters\Zergling.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Zerg.Hydralisk" Collapsed="true">
+    <Position X="25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Zerg\Fighters\Hydralisk.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.Units.Races.Zerg.Workers.Drone" Collapsed="true">
+    <Position X="29.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Units\Races\Zerg\Workers\Drone.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="StarCraft.Interfaces.IFighter" Collapsed="true">
-    <Position X="5.25" Y="2.75" Width="1.5" />
+    <Position X="5.75" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IFighter.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="StarCraft.Interfaces.IGameObject" Collapsed="true">
-    <Position X="7" Y="2.75" Width="1.5" />
+    <Position X="4.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAACACACIEAAAAgAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Interfaces\IGameObject.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="StarCraft.Interfaces.IGatherer" Collapsed="true">
-    <Position X="5.25" Y="3.5" Width="1.5" />
+    <Position X="3.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IGatherer.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="StarCraft.Interfaces.IMovable" Collapsed="true">
-    <Position X="7" Y="3.5" Width="1.5" />
+    <Position X="3.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>Interfaces\IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="StarCraft.Interfaces.IPlayer" Collapsed="true">
+    <Position X="32" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiBCgAAE0CAAAgAAAAAAAAQAAAAAAAAAACAAQABABAA=</HashCode>
+      <FileName>Interfaces\IPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StarCraft.Interfaces.IUserInterfacecs" Collapsed="true">
+    <Position X="33.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IUserInterfacecs.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="StarCraft.GameObject.RaceType" Collapsed="true">
-    <Position X="5.25" Y="4.5" Width="1.5" />
+    <Position X="32" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameObject\RaceType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="StarCraft.GameObject.ResourceType" Collapsed="true">
-    <Position X="7" Y="4.5" Width="1.5" />
+    <Position X="33.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>GameObject\ResourceType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="StarCraft.GameObject.UnitType" Collapsed="true">
-    <Position X="5.25" Y="5.25" Width="1.5" />
+    <Position X="35.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>GameObject\UnitType.cs</FileName>

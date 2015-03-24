@@ -2,7 +2,7 @@
 {
     using StarCraft.GameObject;
 
-    public interface IGatherer : IGameObject, IMovable
+    public interface IGatherer : IMovable
     {
         bool CollectResources(ResourceType resource);
         void Work(ResourceType resource);
