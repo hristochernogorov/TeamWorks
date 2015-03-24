@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public interface IFighter : IGameObject, IMovable
+    public interface IFighter : IGameObject
     {
         void Attack(IGameObject obj);
 
