@@ -1,7 +1,5 @@
-﻿namespace StarCraft
+﻿namespace StarCraft.GameObject
 {
-    using System;
-
     public enum RaceType
     {
         Protoss,

@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D5281A17-9EB9-4E4A-8897-0AEF892F805E}</ProjectGuid>
+    <ProjectGuid>{719DA4A9-90F8-4C18-8104-2B2408B7AA59}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StarCraft</RootNamespace>
     <AssemblyName>StarCraft</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,31 +42,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Building.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="Fighter.cs" />
-    <Compile Include="GameObject.cs" />
-    <Compile Include="IRace.cs" />
-    <Compile Include="Point.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Engine\CommandsConstant.cs" />
+    <Compile Include="Engine\StarCraftEngine.cs" />
+    <Compile Include="GameObject\Building.cs" />
+    <Compile Include="GameObject\GameObject.cs" />
+    <Compile Include="GameObject\KayboardInterface.cs" />
+    <Compile Include="GameObject\MovingObject.cs" />
+    <Compile Include="GameObject\Player.cs" />
+    <Compile Include="GameObject\Position.cs" />
+    <Compile Include="GameObject\RaceType.cs" />
+    <Compile Include="GameObject\ResourceType.cs" />
+    <Compile Include="GameObject\Unit.cs" />
+    <Compile Include="GameObject\UnitType.cs" />
+    <Compile Include="Interfaces\IFighter.cs" />
+    <Compile Include="Interfaces\IGameObject.cs" />
+    <Compile Include="Interfaces\IGatherer.cs" />
+    <Compile Include="Interfaces\IMovable.cs" />
+    <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="Interfaces\IUserInterfacecs.cs" />
+    <Compile Include="StarCraftMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RaceType.cs" />
-    <Compile Include="Unit.cs" />
-    <Compile Include="Units\Races\Protoss\Fighters\HighTemplar.cs" />
-    <Compile Include="Units\Races\Protoss\Fighters\Zealot.cs" />
-    <Compile Include="Units\Races\Protoss\Workers\Probe.cs" />
-    <Compile Include="Worker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="StarCraft.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Units\Races\Terran\Fighters\" />
-    <Folder Include="Units\Races\Terran\Workers\" />
-    <Folder Include="Units\Races\Zerg\Fighters\" />
-    <Folder Include="Units\Races\Zerg\Workers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

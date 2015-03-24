@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StarCraft.GameObject.Building" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Building.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarCraft.GameObject.GameObject" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAACACACIEAgACgAAAIAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>GameObject\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.GameObject.MovingObject" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>GameObject\MovingObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarCraft.GameObject.Player" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAAAAAABAAQAAIAAAAAAAAUAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarCraft.GameObject.Position" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>GameObject\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarCraft.GameObject.Unit" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarCraft.StarCraftMain" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>StarCraftMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="StarCraft.Interfaces.IFighter" Collapsed="true">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IFighter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StarCraft.Interfaces.IGameObject" Collapsed="true">
+    <Position X="7" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAACACACIEAAAAgAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Interfaces\IGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StarCraft.Interfaces.IGatherer" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IGatherer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StarCraft.Interfaces.IMovable" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Interfaces\IMovable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="StarCraft.GameObject.RaceType" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject\RaceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="StarCraft.GameObject.ResourceType" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>GameObject\ResourceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="StarCraft.GameObject.UnitType" Collapsed="true">
+    <Position X="5.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>GameObject\UnitType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
