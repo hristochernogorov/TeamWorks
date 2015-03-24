@@ -1,6 +1,7 @@
 ﻿namespace StarCraft.GameObject
 {
-   public class Building 
+   public abstract class Building : GameObject
     {
+
     }
 }

@@ -1,6 +1,5 @@
 ﻿namespace StarCraft.GameObject.Units.Races.Terran.Workers
 {
-    using StarCraft.GameObject;
     using StarCraft.Interfaces;
     using System;
 

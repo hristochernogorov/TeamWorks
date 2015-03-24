@@ -45,6 +45,12 @@
     <Compile Include="Engine\CommandsConstant.cs" />
     <Compile Include="Engine\StarCraftEngine.cs" />
     <Compile Include="GameObject\Building.cs" />
+    <Compile Include="GameObject\Buildings\Races\Protoss\Gateway.cs" />
+    <Compile Include="GameObject\Buildings\Races\Protoss\Nexus.cs" />
+    <Compile Include="GameObject\Buildings\Races\Terran\Barracks.cs" />
+    <Compile Include="GameObject\Buildings\Races\Terran\CommandCenter.cs" />
+    <Compile Include="GameObject\Buildings\Races\Zerg\Hatchery.cs" />
+    <Compile Include="GameObject\Buildings\Races\Zerg\SpawningPool.cs" />
     <Compile Include="GameObject\GameObject.cs" />
     <Compile Include="GameObject\KayboardInterface.cs" />
     <Compile Include="GameObject\MovingObject.cs" />
