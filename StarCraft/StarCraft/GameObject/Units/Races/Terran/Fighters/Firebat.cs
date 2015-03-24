@@ -1,4 +1,4 @@
-﻿namespace StarCraft.Units.Races.Terran.Fighters
+﻿namespace StarCraft.GameObject.Units.Races.Terran.Fighters
 {
     using StarCraft.GameObject;
     using StarCraft.Interfaces;
@@ -6,7 +6,6 @@
 
     public class Firebat : Unit, IFighter
     {
-
         public void Attack(IGameObject obj)
         {
             throw new NotImplementedException();

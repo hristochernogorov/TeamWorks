@@ -1,8 +1,8 @@
-﻿namespace StarCraft.Units.Races.Protoss.Workers
+﻿namespace StarCraft.GameObject.Units.Races.Protoss.Workers
 {
-    using System;
     using StarCraft.GameObject;
     using StarCraft.Interfaces;
+    using System;
 
     public class Probe : Unit, IGatherer
     {

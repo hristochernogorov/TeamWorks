@@ -67,7 +67,7 @@
       <FileName>GameObject\Unit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="StarCraft.Units.Races.Protoss.Fighters.Colossus" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Protoss.Fighters.Colossus" Collapsed="true">
     <Position X="9.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -75,7 +75,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Protoss.Fighters.Dragoon" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Protoss.Fighters.Dragoon" Collapsed="true">
     <Position X="7" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -83,7 +83,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Protoss.Fighters.Zealot" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Protoss.Fighters.Zealot" Collapsed="true">
     <Position X="13.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -91,7 +91,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Protoss.Workers.Probe" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Protoss.Workers.Probe" Collapsed="true">
     <Position X="18.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
@@ -99,7 +99,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Terran.Fighters.Firebat" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Terran.Fighters.Firebat" Collapsed="true">
     <Position X="22.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -107,7 +107,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Terran.Fighters.Goliath" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Terran.Fighters.Goliath" Collapsed="true">
     <Position X="27.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -115,7 +115,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Terran.Fighters.Marine" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Terran.Fighters.Marine" Collapsed="true">
     <Position X="4.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -123,7 +123,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Terran.Workers.SCV" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Terran.Workers.SCV" Collapsed="true">
     <Position X="11.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
@@ -131,7 +131,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Zerg.Fighters.Guardian" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Zerg.Fighters.Guardian" Collapsed="true">
     <Position X="16" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -139,7 +139,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Zerg.Fighters.Zergling" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Zerg.Fighters.Zergling" Collapsed="true">
     <Position X="20.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -147,7 +147,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Zerg.Hydralisk" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Zerg.Fighters.Hydralisk" Collapsed="true">
     <Position X="25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -155,7 +155,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StarCraft.Units.Races.Zerg.Workers.Drone" Collapsed="true">
+  <Class Name="StarCraft.GameObject.Units.Races.Zerg.Workers.Drone" Collapsed="true">
     <Position X="29.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>

@@ -1,4 +1,4 @@
-﻿namespace StarCraft.Units.Races.Zerg.Fighters
+﻿namespace StarCraft.GameObject.Units.Races.Zerg.Fighters
 {
     using StarCraft.GameObject;
     using StarCraft.Interfaces;

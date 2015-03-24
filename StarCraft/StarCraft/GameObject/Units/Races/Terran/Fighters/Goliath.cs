@@ -1,4 +1,4 @@
-﻿namespace StarCraft.Units.Races.Terran.Fighters
+﻿namespace StarCraft.GameObject.Units.Races.Terran.Fighters
 {
     using StarCraft.GameObject;
     using StarCraft.Interfaces;

@@ -1,4 +1,4 @@
-﻿namespace StarCraft.Units.Races.Terran.Workers
+﻿namespace StarCraft.GameObject.Units.Races.Terran.Workers
 {
     using StarCraft.GameObject;
     using StarCraft.Interfaces;

@@ -1,4 +1,4 @@
-﻿namespace StarCraft.Units.Races.Protoss.Fighters
+﻿namespace StarCraft.GameObject.Units.Races.Protoss.Fighters
 {
     using StarCraft.GameObject;
     using StarCraft.Interfaces;
@@ -6,7 +6,6 @@
 
     public class Zealot : Unit, IFighter
     {
-
         public void Attack(IGameObject obj)
         {
             throw new NotImplementedException();

@@ -1,4 +1,4 @@
-﻿namespace StarCraft.Units.Races.Protoss.Fighters
+﻿namespace StarCraft.GameObject.Units.Races.Protoss.Fighters
 {
     using StarCraft.GameObject;
     using StarCraft.Interfaces;
