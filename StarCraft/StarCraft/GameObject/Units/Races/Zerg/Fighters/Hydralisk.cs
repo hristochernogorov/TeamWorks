@@ -5,6 +5,11 @@
 
     public class Hydralisk : Unit, IFighter
     {
+        public Hydralisk(Position position, string owner, int health)
+           : base(position, owner, health)
+        {
+
+        }
         public void Attack(IGameObject obj)
         {
             throw new NotImplementedException();

@@ -5,6 +5,11 @@
     
     public class Dragoon : Unit, IFighter
     {
+        public Dragoon(Position position, string owner, int health)
+           : base(position, owner, health)
+        {
+
+        }
         public void Attack(IGameObject obj)
         {
             throw new NotImplementedException();

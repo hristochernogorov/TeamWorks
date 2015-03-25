@@ -5,6 +5,11 @@
 
     public class Probe : Unit, IGatherer
     {
+        public Probe(Position position, string owner, int health)
+           : base(position, owner, health)
+        {
+
+        }
         public bool CollectResources(ResourceType resource)
         {
             throw new NotImplementedException();

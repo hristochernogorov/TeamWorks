@@ -1,6 +1,6 @@
 ﻿namespace StarCraft.GameObject
 {
-    public struct Position
+    public class Position
     {
         public readonly int X;
 
@@ -31,6 +31,11 @@
         public static bool operator !=(Position a, Position b)
         {
             return !(a == b);
+        }
+        public override bool Equals(object obj)
+        {
+            Position position = obj as Position;
+            return this.X == position.X && this.Y == position.Y;
         }
         public override string ToString()
         {

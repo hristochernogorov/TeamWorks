@@ -5,6 +5,11 @@
 
     public class Drone : Unit, IGatherer
     {
+        public Drone(Position position, string owner, int health)
+           : base(position, owner, health)
+        {
+
+        }
         public bool CollectResources(ResourceType resource)
         {
             throw new NotImplementedException();

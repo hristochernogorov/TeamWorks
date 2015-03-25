@@ -4,11 +4,11 @@
 
     public abstract class MovingObject : GameObject, IMovable
     {
-     /*   public MovingObject(Position position, string owner)
-            : base(position, owner)
+        public MovingObject(Position position, string owner, int health)
+            : base(position, owner, health)
         {
 
-        }*/
+        }
         public void GoTo(Position newPosition)
         {
             this.Position = newPosition;

@@ -4,5 +4,10 @@
 
     public class SpawningPool : Building
     {
+        public SpawningPool(Position position, string owner, int health)
+           : base(position, owner, health)
+       {
+
+       }
     }
 }

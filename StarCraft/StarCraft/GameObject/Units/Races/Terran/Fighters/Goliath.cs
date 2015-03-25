@@ -5,6 +5,11 @@
 
     public class Goliath : Unit, IFighter
     {
+        public Goliath(Position position, string owner, int health)
+           : base(position, owner, health)
+        {
+
+        }
         public void Attack(IGameObject obj)
         {
             throw new NotImplementedException();

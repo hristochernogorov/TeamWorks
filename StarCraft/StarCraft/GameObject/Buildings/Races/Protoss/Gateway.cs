@@ -4,5 +4,10 @@
 
     public class Gateway : Building
     {
+        public Gateway(Position position, string owner, int health)
+           : base(position, owner, health)
+       {
+
+       }
     }
 }
