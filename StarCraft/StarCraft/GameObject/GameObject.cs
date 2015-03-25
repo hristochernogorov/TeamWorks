@@ -5,9 +5,6 @@
 
     public abstract class GameObject : IGameObject
     {
-        private const int GeneralMineralCost = 0;
-        private const int GeneralGasCost = 0;
-        private const int GeneralSloteTakes = 0;
         private string owner;
         private int mineralCost;
         private int gasCost;
@@ -15,14 +12,14 @@
         private int health;
         private Position position;
 
-        public GameObject(Position position, string owner, int health)
+        public GameObject(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
         {
             this.Position = position;
             this.Owner = owner;
             this.Health = health;
-            this.MineralCost = GameObject.GeneralMineralCost;
-            this.GasCost = GameObject.GeneralGasCost;
-            this.Sloat = GameObject.GeneralSloteTakes;
+            this.MineralCost = mineralCost;
+            this.GasCost = gasCost;
+            this.Sloat = sloat;
         }
 
         public int Health

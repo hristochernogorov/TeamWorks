@@ -6,8 +6,8 @@
 
     public class Dragoon : Unit, IRace, IFighter
     {
-        public Dragoon(Position position, string owner, int health)
-           : base(position, owner, health)
+        public Dragoon(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
         {
         }
 

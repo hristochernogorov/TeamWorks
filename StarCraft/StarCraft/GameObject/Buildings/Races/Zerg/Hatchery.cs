@@ -4,8 +4,8 @@
 
     public class Hatchery : Building, IRace
     {
-        public Hatchery(Position position, string owner, int health)
-           : base(position, owner, health)
+        public Hatchery(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
        {
        }
 

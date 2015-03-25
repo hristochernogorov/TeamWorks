@@ -6,8 +6,8 @@
 
     public class Goliath : Unit, IRace, IFighter
     {
-        public Goliath(Position position, string owner, int health)
-           : base(position, owner, health)
+        public Goliath(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
         {
         }
 

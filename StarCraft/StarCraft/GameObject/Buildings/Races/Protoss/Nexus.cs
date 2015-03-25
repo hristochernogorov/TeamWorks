@@ -4,8 +4,8 @@
 
     public class Nexus : Building, IRace
     {
-        public Nexus(Position position, string owner, int health)
-           : base(position, owner, health)
+        public Nexus(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
        {
        }
 

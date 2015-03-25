@@ -6,8 +6,8 @@
 
     public class Zealot : Unit, IRace, IFighter
     {
-        public Zealot(Position position, string owner, int health)
-           : base(position, owner, health)
+        public Zealot(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
         {
         }
 

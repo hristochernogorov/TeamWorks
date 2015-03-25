@@ -6,8 +6,8 @@
 
     public class SCV : Unit, IRace, IGatherer
     {
-        public SCV(Position position, string owner, int health)
-           : base(position, owner, health)
+        public SCV(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
         {
         }
 

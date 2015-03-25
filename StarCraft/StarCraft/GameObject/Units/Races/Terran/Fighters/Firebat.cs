@@ -6,8 +6,8 @@
 
     public class Firebat : Unit, IRace, IFighter
     {
-        public Firebat(Position position, string owner, int health)
-           : base(position, owner, health)
+        public Firebat(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost ,gasCost, sloat)
         {
         }
 

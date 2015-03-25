@@ -6,8 +6,8 @@
 
     public class Colossus : Unit, IRace, IFighter
     {
-        public Colossus(Position position, string owner, int health)
-            : base(position, owner, health)
+        public Colossus(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+            : base(position, owner, health, mineralCost, gasCost, sloat)
         {
         }
 

@@ -4,8 +4,8 @@
 
     public class CommandCenter : Building, IRace
     {
-        public CommandCenter(Position position, string owner, int health)
-           : base(position, owner, health)
+        public CommandCenter(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
        {
        }
 

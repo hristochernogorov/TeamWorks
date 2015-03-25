@@ -6,8 +6,8 @@
 
     public class Drone : Unit, IRace, IGatherer
     {
-        public Drone(Position position, string owner, int health)
-           : base(position, owner, health)
+        public Drone(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
         {
         }
 

@@ -6,8 +6,8 @@
 
     public class Guardian : Unit, IRace, IFighter
     {
-        public Guardian(Position position, string owner, int health)
-           : base(position, owner, health)
+        public Guardian(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
         {
         }
 

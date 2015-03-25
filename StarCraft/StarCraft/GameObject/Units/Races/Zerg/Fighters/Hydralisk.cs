@@ -6,8 +6,8 @@
 
     public class Hydralisk : Unit, IRace, IFighter
     {
-        public Hydralisk(Position position, string owner, int health)
-           : base(position, owner, health)
+        public Hydralisk(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, health, mineralCost, gasCost, sloat)
         {
         }
 
