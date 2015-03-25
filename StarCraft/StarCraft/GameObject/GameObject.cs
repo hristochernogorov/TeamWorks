@@ -26,13 +26,13 @@
             this.Sloat = GameObject.GeneralSloteTakes;
         }
 
-
         public int Health
         {
             get 
             {
                 return this.health;
             }
+
             protected set
             {
                 if (value <= 0)
@@ -49,6 +49,7 @@
             {
                 return this.mineralCost;
             }
+
             protected set
             {
                 if (value <= 0)
@@ -65,12 +66,14 @@
             {
                 return this.gasCost;
             }
+
             protected set
             {
                 if (value <= 0)
                 {
                     throw new ArgumentOutOfRangeException("Game object gas cost should be greater by zero");
                 }
+
                 this.gasCost = value;
             }
         }
@@ -81,12 +84,14 @@
             {
                 return this.sloteTakes;
             }
+
             protected set
             {
                 if (value <= 0)
                 {
                     throw new ArgumentOutOfRangeException("Game object slote should be greater by zero");
                 }
+
                 this.sloteTakes = value;
             }
         }

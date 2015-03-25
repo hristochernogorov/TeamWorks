@@ -1,13 +1,18 @@
 ﻿namespace StarCraft.GameObject.Buildings.Races.Protoss
 {
-    using System;
+    using StarCraft.Interfaces;
 
-    public class Nexus : Building
+    public class Nexus : Building, IRace
     {
         public Nexus(Position position, string owner, int health)
            : base(position, owner, health)
        {
 
        }
+
+        public RaceType Race
+        {
+            get { return RaceType.Protoss; }
+        }
     }
 }

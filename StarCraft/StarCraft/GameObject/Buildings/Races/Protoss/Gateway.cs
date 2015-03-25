@@ -1,13 +1,18 @@
 ﻿namespace StarCraft.GameObject.Buildings.Races.Protoss
 {
-    using System;
+    using StarCraft.Interfaces;
 
-    public class Gateway : Building
+    public class Gateway : Building, IRace
     {
         public Gateway(Position position, string owner, int health)
            : base(position, owner, health)
        {
 
        }
+
+        public RaceType Race
+        {
+            get { return RaceType.Protoss; }
+        }
     }
 }

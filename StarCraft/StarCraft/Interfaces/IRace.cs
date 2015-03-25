@@ -2,8 +2,8 @@
 {
     using StarCraft.GameObject;
 
-    public interface IUnit
+    public interface IRace
     {
-        UnitType Type { get; }
+        RaceType Race { get; }
     }
 }

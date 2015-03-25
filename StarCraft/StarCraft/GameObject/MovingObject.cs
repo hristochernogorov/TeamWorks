@@ -7,12 +7,11 @@
         public MovingObject(Position position, string owner, int health)
             : base(position, owner, health)
         {
-
         }
+
         public void GoTo(Position newPosition)
         {
             this.Position = newPosition;
-            throw new System.NotImplementedException();
         }
     }
 }

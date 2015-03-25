@@ -3,7 +3,7 @@
     using StarCraft.Interfaces;
     using System;
 
-    public class Probe : Unit, IGatherer
+    public class Probe : Unit, IGatherer, IRace
     {
         public Probe(Position position, string owner, int health)
            : base(position, owner, health)
@@ -18,6 +18,11 @@
         public void Work(ResourceType resource)
         {
             throw new NotImplementedException();
+        }
+
+        public RaceType Race
+        {
+            get { return RaceType.Protoss; }
         }
     }
 }

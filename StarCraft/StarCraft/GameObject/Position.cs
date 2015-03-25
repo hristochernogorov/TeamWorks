@@ -18,6 +18,7 @@
             this.X = int.Parse(xStr);
             this.Y = int.Parse(yStr);
         }
+
         public override int GetHashCode()
         {
             return this.X * 7 + this.Y;
@@ -32,10 +33,12 @@
         {
             return !(a == b);
         }
+
         public override string ToString()
         {
             return string.Format("({0},{1})", this.X, this.Y);
         }
+
         public static Position Parse(string pointString)
         {
             string coordinatesPairString = pointString.Substring(1, pointString.Length - 2);
