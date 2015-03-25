@@ -2,7 +2,7 @@
 {
     using StarCraft.GameObject;
 
-   public interface IMovable: IGameObject
+   public interface IMovable : IGameObject
     {
        void GoTo(Position newPosition);
     }

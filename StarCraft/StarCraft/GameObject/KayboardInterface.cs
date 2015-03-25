@@ -1,11 +1,12 @@
 ﻿namespace StarCraft.GameObject
 {
-    using StarCraft.Interfaces;
-
     using System;
+
+    using StarCraft.Interfaces;
 
     public class KayboardInterface : IUserInterfacecs
     {
+        public event EventHandler OnActionPressed;
 
         public void ProcessInput()
         {
@@ -21,7 +22,5 @@
                 }
             }
         }
-
-        public event EventHandler OnActionPressed;
     }
 }

@@ -1,10 +1,10 @@
 ﻿namespace StarCraft.GameObject
 {
-    using StarCraft.Interfaces;
-
     using System.Collections.Generic;
 
-    //TODO Secure programming
+    using StarCraft.Interfaces;
+
+    // TODO Secure programming
     public class Player : IPlayer
     {
         private string name;
@@ -29,6 +29,7 @@
             {
                 return this.name;
             }
+
             private set
             {
                 this.name = value;
@@ -41,6 +42,7 @@
             {
                 return this.emptySlots;
             }
+
             private set
             {
                 this.emptySlots = value;
@@ -53,6 +55,7 @@
             {
                 return this.fullSlots;
             }
+
             private set
             {
                 this.fullSlots = value;
@@ -65,6 +68,7 @@
             {
                 return this.mineral;
             }
+
             private set
             {
                 this.mineral = value;
@@ -77,6 +81,7 @@
             {
                 return this.gas;
             }
+
             set
             {
                 this.gas = value;
@@ -89,6 +94,7 @@
             {
                 return new List<IGameObject>(this.gameObjects);
             }
+
             private set
             {
                 this.gameObjects = value;
@@ -101,6 +107,7 @@
             {
                 return new List<IFighter>(this.fighters);
             }
+
             private set
             {
                 this.fighters = value;
@@ -113,6 +120,7 @@
             {
                 return new List<IGatherer>(this.gatherers);
             }
+
             private set
             {
                 this.gatherers = value;

@@ -1,9 +1,9 @@
 ﻿namespace StarCraft
 {
-    using StarCraft.GameObject;
-    using StarCraft.Engine;
-
     using System;
+
+    using StarCraft.Engine;
+    using StarCraft.GameObject;
 
     public class StarCraftMain
     {
@@ -11,7 +11,8 @@
         {
             var keyboard = new KayboardInterface();
             StarCraftEngine engine = new StarCraftEngine(new Player("a"), new Player("as"), keyboard);
-            //Event. listen for enter kay press
+
+            // Event. listen for enter kay press
             keyboard.OnActionPressed += (sender, eventInfo) =>
             {
                 Console.Write("Enter command: ");
@@ -24,7 +25,7 @@
                 Console.Clear();
             };
 
-            //Start engine
+            // Start engine
             engine.Run();
         }
     }

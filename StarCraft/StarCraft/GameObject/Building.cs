@@ -5,7 +5,6 @@
        public Building(Position position, string owner, int health)
            : base(position, owner, health)
        {
-
        }
     }
 }

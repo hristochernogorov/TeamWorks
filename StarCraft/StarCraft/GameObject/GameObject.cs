@@ -15,7 +15,6 @@
         private int health;
         private Position position;
 
-
         public GameObject(Position position, string owner, int health)
         {
             this.Position = position;
@@ -39,6 +38,7 @@
                 {
                     throw new ArgumentOutOfRangeException("Game object health should be greater by zero");
                 }
+
                 this.health = value;
             }
         }
@@ -56,6 +56,7 @@
                 {
                     throw new ArgumentOutOfRangeException("Game object mineral cost should be greater by zero");
                 }
+
                 this.mineralCost = value;
             }
         }
@@ -98,14 +99,14 @@
 
         public string Owner
         {
-            //TODO: Validation
+            // TODO: Validation
             get { return this.owner; }
             protected set { this.owner = value; }
         }
 
         public Position Position
         {
-            //TODO: Validation
+            // TODO: Validation
             get { return this.position; }
             protected set { this.position = value; }
         }

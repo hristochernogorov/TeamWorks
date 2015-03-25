@@ -2,12 +2,12 @@
 {
     public class CommandsConstant
     {
-        public const string playerOne = "player1";
-        public const string playerTwo = "player2";
-        public const string create = "create";
-        public const string attack = "attack";
-        public const string collect = "collect";
-        public const string minerals = "minerals";
-        public const string gas = "gas";
+        public const string PlayerOne = "player1";
+        public const string PlayerTwo = "player2";
+        public const string Create = "create";
+        public const string Attack = "attack";
+        public const string Collect = "collect";
+        public const string Minerals = "minerals";
+        public const string Gas = "gas";
     }
 }

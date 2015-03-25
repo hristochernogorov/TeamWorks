@@ -7,7 +7,6 @@
         public Nexus(Position position, string owner, int health)
            : base(position, owner, health)
        {
-
        }
 
         public RaceType Race

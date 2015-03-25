@@ -10,9 +10,7 @@
         int Sloat { get; }
         string Owner { get; }
         Position Position { get; }
-
         bool IsAlive();
         void DamageTaken(int damage);
-
     }
 }

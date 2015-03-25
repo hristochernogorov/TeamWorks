@@ -1,17 +1,16 @@
 ﻿namespace StarCraft.Engine
 {
-    using StarCraft.Interfaces;
-    using StarCraft.GameObject;
-
     using System;
     using System.Linq;
     using System.Threading;
+
+    using StarCraft.GameObject;
+    using StarCraft.Interfaces;
 
     public class StarCraftEngine
     {
         private const int MineralPerCycle = 8;
         private const int GasPerCycle = 8;
-
 
         private IPlayer playerOne;
         private IPlayer playerTwo;
@@ -23,7 +22,8 @@
             this.playerTwo = playerTwo;
             this.userInterface = userInterface;
         }
-        //Live cycle
+
+        // Live cycle
         public void Run()
         {
             while (true)
@@ -31,8 +31,8 @@
                 Thread.Sleep(200);
 
                 this.userInterface.ProcessInput();
-                this.Update(playerOne, playerTwo);
-                this.Update(playerTwo, playerOne);
+                this.Update(this.playerOne, this.playerTwo);
+                this.Update(this.playerTwo, this.playerOne);
             }
         }
 
@@ -46,16 +46,17 @@
         {
             foreach (var unit in player.Gatherer)
             {
-
                 if (unit.CollectResources(ResourceType.Minerals))
                 {
                     this.playerOne.GetMineral(MineralPerCycle);
                 }
+
                 if (unit.CollectResources(ResourceType.Gas))
                 {
                     this.playerOne.GetGas(GasPerCycle);
                 }
             }
+
             foreach (var fighter in player.Fighter)
             {
                 var opsitePlayerUnitOnSamePossition = opositePlayer.GameObjects.Where(x => fighter.Position == x.Position);
@@ -67,10 +68,10 @@
         {
             switch (command[0])
             {
-                case CommandsConstant.playerOne:
+                case CommandsConstant.PlayerOne:
                     this.ProceedCommand(command, this.playerOne);
                     break;
-                case CommandsConstant.playerTwo:
+                case CommandsConstant.PlayerTwo:
                     this.ProceedCommand(command, this.playerTwo);
                     break;
                 default:
@@ -78,15 +79,15 @@
             }
         }
 
-        //TODO command
+        // TODO command
         private void ProceedCommand(string[] command, IPlayer player)
         {
             switch (command[1])
             {
-                case CommandsConstant.create:
+                case CommandsConstant.Create:
                     this.ProceedCreateCommand(command, player);
                     break;
-                case CommandsConstant.attack:
+                case CommandsConstant.Attack:
                     this.ProceedCreateCommand(command, player);
                     break;
                 default:
