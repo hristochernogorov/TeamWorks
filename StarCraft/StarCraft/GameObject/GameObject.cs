@@ -2,7 +2,9 @@
 {
     using System;
     using StarCraft.Interfaces;
+    using StarCraft.CustomAttributes;
 
+    [Author("Todor Dimitrov")]
     public abstract class GameObject : IGameObject
     {
         private string owner;
