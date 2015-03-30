@@ -4,21 +4,27 @@
 
     using StarCraft.Interfaces;
 
-    public class Dragoon : Unit, IRace, IFighter
+    public class Dragoon : Unit, IFighter
     {
-        public Dragoon(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, health, mineralCost, gasCost, sloat)
+        public Dragoon(Position position, string owner, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, mineralCost, gasCost, sloat)
         {
+            this.Health = 80;
         }
 
-        public RaceType Race
+        public int AttackDmg
+        {
+            get { return 10; }
+        }
+
+        public override RaceType Race
         {
             get { return RaceType.Protoss; }
         }
 
         public void Attack(IGameObject obj)
         {
-            throw new NotImplementedException();
+            obj.Health -= this.AttackDmg;
         }
 
         public void FindObjectToAttack(System.Collections.Generic.IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)

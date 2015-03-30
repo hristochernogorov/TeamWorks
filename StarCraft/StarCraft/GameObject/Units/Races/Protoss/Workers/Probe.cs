@@ -4,14 +4,15 @@
 
     using StarCraft.Interfaces;
 
-    public class Probe : Unit, IRace, IGatherer
+    public class Probe : Unit, IGatherer
     {
-        public Probe(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, health, mineralCost, gasCost, sloat)
+        public Probe(Position position, string owner, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, mineralCost, gasCost, sloat)
         {
+            this.Health = 20;
         }
 
-        public RaceType Race
+        public override RaceType Race
         {
             get { return RaceType.Protoss; }
         }

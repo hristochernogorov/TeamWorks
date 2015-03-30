@@ -2,14 +2,15 @@
 {
     using StarCraft.Interfaces;
 
-    public class Nexus : Building, IRace
+    public class Nexus : Building
     {
-        public Nexus(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, health, mineralCost, gasCost, sloat)
-       {
-       }
+        public Nexus(Position position, string owner, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, mineralCost, gasCost, sloat)
+        {
+           this.Health = 1000;
+        }
 
-        public RaceType Race
+        public override RaceType Race
         {
             get { return RaceType.Protoss; }
         }

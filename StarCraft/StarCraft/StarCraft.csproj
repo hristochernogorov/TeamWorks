@@ -54,7 +54,6 @@
     <Compile Include="GameObject\Buildings\Races\Zerg\SpawningPool.cs" />
     <Compile Include="GameObject\GameObject.cs" />
     <Compile Include="GameObject\KayboardInterface.cs" />
-    <Compile Include="GameObject\MovingObject.cs" />
     <Compile Include="GameObject\Player.cs" />
     <Compile Include="GameObject\Position.cs" />
     <Compile Include="GameObject\RaceType.cs" />

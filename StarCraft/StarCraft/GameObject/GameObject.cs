@@ -1,8 +1,8 @@
 ﻿namespace StarCraft.GameObject
 {
     using System;
-    using StarCraft.Interfaces;
     using StarCraft.CustomAttributes;
+    using StarCraft.Interfaces;
 
     [Author("Todor Dimitrov")]
     public abstract class GameObject : IGameObject
@@ -11,37 +11,20 @@
         private int mineralCost;
         private int gasCost;
         private int sloteTakes;
-        private int health;
         private Position position;
 
-        public GameObject(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
+        public GameObject(Position position, string owner, int mineralCost, int gasCost, int sloat)
         {
             this.Position = position;
             this.Owner = owner;
-            this.Health = health;
+            this.Health = 0;
             this.MineralCost = mineralCost;
             this.GasCost = gasCost;
             this.Sloat = sloat;
         }
 
-        public int Health
-        {
-            get 
-            {
-                return this.health;
-            }
-
-            protected set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Game object health should be greater by zero");
-                }
-
-                this.health = value;
-            }
-        }
-
+        public int Health { get; set; }
+        
         public int MineralCost
         {
             get 

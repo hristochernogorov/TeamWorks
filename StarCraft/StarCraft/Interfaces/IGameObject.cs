@@ -4,7 +4,7 @@
 
     public interface IGameObject
     {
-        int Health { get; }
+        int Health { get; set; }
         int MineralCost { get; }
         int GasCost { get; }
         int Sloat { get; }

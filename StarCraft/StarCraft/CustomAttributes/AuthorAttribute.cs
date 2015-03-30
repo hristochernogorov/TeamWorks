@@ -1,5 +1,4 @@
-﻿
-namespace StarCraft.CustomAttributes
+﻿namespace StarCraft.CustomAttributes
 {
     using System;
     using System.Runtime.InteropServices;
@@ -9,13 +8,11 @@ namespace StarCraft.CustomAttributes
       AllowMultiple = true)]
     public class AuthorAttribute : Attribute
     {
-        public string Name { get; private set; }
-
         public AuthorAttribute(string name)
         {
             this.Name = name;
         }
+
+        public string Name { get; private set; }
     }
 }
-
-

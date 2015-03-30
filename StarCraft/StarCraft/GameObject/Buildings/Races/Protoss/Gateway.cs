@@ -2,14 +2,15 @@
 {
     using StarCraft.Interfaces;
 
-    public class Gateway : Building, IRace
+    public class Gateway : Building
     {
-        public Gateway(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, health, mineralCost, gasCost, sloat)
-       {
-       }
+        public Gateway(Position position, string owner, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, mineralCost, gasCost, sloat)
+        {
+           this.Health = 500;
+        }
 
-        public RaceType Race
+        public override RaceType Race
         {
             get { return RaceType.Protoss; }
         }

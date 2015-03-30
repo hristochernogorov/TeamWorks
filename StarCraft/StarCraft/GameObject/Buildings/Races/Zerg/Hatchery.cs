@@ -2,14 +2,15 @@
 {
     using StarCraft.Interfaces;
 
-    public class Hatchery : Building, IRace
+    public class Hatchery : Building
     {
-        public Hatchery(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, health, mineralCost, gasCost, sloat)
-       {
-       }
+        public Hatchery(Position position, string owner, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, mineralCost, gasCost, sloat)
+        {
+           this.Health = 1250;
+        }
 
-        public RaceType Race
+        public override RaceType Race
         {
             get { return RaceType.Zerg; }
         }

@@ -2,14 +2,15 @@
 {
     using StarCraft.Interfaces;
 
-    public class SpawningPool : Building, IRace
+    public class SpawningPool : Building
     {
-        public SpawningPool(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
-            : base(position, owner, health, mineralCost, gasCost, sloat)
-        { 
+        public SpawningPool(Position position, string owner, int mineralCost, int gasCost, int sloat)
+            : base(position, owner, mineralCost, gasCost, sloat)
+        {
+            this.Health = 750;
         }
 
-        public RaceType Race
+        public override RaceType Race
         {
             get { return RaceType.Zerg; }
         }

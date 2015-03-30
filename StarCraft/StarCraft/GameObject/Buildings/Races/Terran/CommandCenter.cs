@@ -2,14 +2,15 @@
 {
     using StarCraft.Interfaces;
 
-    public class CommandCenter : Building, IRace
+    public class CommandCenter : Building
     {
-        public CommandCenter(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, health, mineralCost, gasCost, sloat)
-       {
-       }
+        public CommandCenter(Position position, string owner, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, mineralCost, gasCost, sloat)
+        {
+            this.Health = 1500;
+        }
 
-        public RaceType Race
+        public override RaceType Race
         {
             get { return RaceType.Terran; }
         }

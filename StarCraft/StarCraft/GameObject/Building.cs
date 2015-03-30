@@ -1,10 +1,14 @@
 ﻿namespace StarCraft.GameObject
 {
-   public abstract class Building : GameObject
+    using StarCraft.Interfaces;
+
+    public abstract class Building : GameObject, IRace
     {
-       public Building(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, health, mineralCost, gasCost, sloat)
+       public Building(Position position, string owner, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, mineralCost, gasCost, sloat)
        {
        }
+
+       public abstract RaceType Race { get; }
     }
 }

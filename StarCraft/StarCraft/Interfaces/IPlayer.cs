@@ -9,6 +9,7 @@
         int FullSlots { get; }
         int Mineral { get; }
         int Gas { get; set; }
+
         ICollection<IGameObject> GameObjects { get; }
         ICollection<IFighter> Fighter { get; }
         ICollection<IGatherer> Gatherer { get; }

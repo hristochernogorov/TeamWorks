@@ -4,14 +4,15 @@
 
     using StarCraft.Interfaces;
 
-    public class Drone : Unit, IRace, IGatherer
+    public class Drone : Unit, IGatherer
     {
-        public Drone(Position position, string owner, int health, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, health, mineralCost, gasCost, sloat)
+        public Drone(Position position, string owner, int mineralCost, int gasCost, int sloat)
+           : base(position, owner, mineralCost, gasCost, sloat)
         {
+            this.Health = 40;
         }
 
-        public RaceType Race
+        public override RaceType Race
         {
             get { return RaceType.Zerg; }
         }
