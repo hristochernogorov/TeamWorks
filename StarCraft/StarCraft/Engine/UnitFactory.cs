@@ -7,7 +7,7 @@ namespace StarCraft.Engine
     [Author("Todor Dimitrov")]
     public class UnitFactory : IUnitFactory
     {
-        public IFighter CreateFighterUnit(Position position, IPlayer player, int mineral, int gas, int sloat)
+        public static IFighter CreateFighterUnit(Position position, IPlayer player, int mineral, int gas, int sloat)
         {
             throw new System.NotImplementedException();
         }

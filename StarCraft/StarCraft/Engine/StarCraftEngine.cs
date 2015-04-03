@@ -7,6 +7,7 @@
     using StarCraft.GameObject;
     using StarCraft.GameObject.Units.Races.Protoss.Fighters;
     using StarCraft.Interfaces;
+    using StarCraft.CustomAttributes;
 
     public class StarCraftEngine
     {
@@ -102,6 +103,7 @@
             throw new NotImplementedException();
         }
 
+        [Author("Todor Dimitrov")]
         // TODO implement create command
         private void ProceedCreateCommand(string[] command, IPlayer player)
         {
@@ -110,7 +112,8 @@
                 case "colossus":
                     {
                         Position position = Position.Parse(command[3]);
-
+                        IFighter unit = UnitFactory.CreateFighterUnit(position, this.playerOne, int.Parse(command[4]), int.Parse(command[5]), int.Parse(command[6])) as Colossus;
+                        //TODO implement add to player units
                     }
                     break;
                 default:
