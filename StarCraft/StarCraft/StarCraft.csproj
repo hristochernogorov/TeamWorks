@@ -79,6 +79,7 @@
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\IRace.cs" />
     <Compile Include="Interfaces\IUnit.cs" />
+    <Compile Include="Interfaces\IUnitFactory.cs" />
     <Compile Include="Interfaces\IUserInterfacecs.cs" />
     <Compile Include="StarCraftMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
