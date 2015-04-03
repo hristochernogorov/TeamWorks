@@ -1,20 +1,32 @@
-﻿
-namespace StarCraft.Engine
+﻿namespace StarCraft.Engine
 {
+    using GameObject.Units.Races.Protoss.Workers;
+    using GameObject.Units.Races.Terran.Workers;
+    using GameObject.Units.Races.Zerg.Workers;
     using StarCraft.GameObject;
     using StarCraft.Interfaces;
     using StarCraft.CustomAttributes;
+
     [Author("Todor Dimitrov")]
     public class UnitFactory : IUnitFactory
     {
-        public static IFighter CreateFighterUnit(Position position, IPlayer player, int mineral, int gas, int sloat)
+        public IGatherer CreateProbe(Position position, string name)
         {
-            throw new System.NotImplementedException();
+            return new Probe(position, name);
+        }
+        public IGatherer CreateScv(Position position, string name)
+        {
+            return new SCV(position, name);
+        }
+        public IGatherer CreateDrone(Position position, string name)
+        {
+            return new Drone(position, name);
         }
 
-        public IGatherer CreateGathererUnit(Position position, IPlayer player, int mineral, int gas, int sloat)
+        public IFighter CreateFighterUnit(Position position, string namer)
         {
             throw new System.NotImplementedException();
         }
     }
 }
+
