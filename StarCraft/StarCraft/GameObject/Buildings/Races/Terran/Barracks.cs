@@ -4,15 +4,10 @@
 
     public class Barracks : Building
     {
-        public Barracks(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
-       {
-           this.Health = 1000;
-       }
-
-        public override RaceType Race
+        public Barracks(Position position, string owner)
+            : base(position, owner, 100, 20, 1000, RaceType.Terran)
         {
-            get { return RaceType.Terran; }
         }
+
     }
 }

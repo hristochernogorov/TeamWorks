@@ -1,36 +1,14 @@
 ﻿namespace StarCraft.GameObject.Units.Races.Protoss.Fighters
 {
-    using System;
+    using StarCraft.GameObject;
 
-    using StarCraft.Interfaces;
-
-    public class Colossus : Unit, IFighter
+    public class Colossus : Unit
     {
         private const int AttackDemage = 15;
-        public Colossus(Position position, string owner, int mineralCost, int gasCost, int sloat)
-            : base(position, owner, mineralCost, gasCost, sloat)
-        {
-            this.Health = 200;
-        }
 
-        public int AttackDmg
+        public Colossus(Position position, string name)
+            : base(position, name, 100, 20, 2, 200, Colossus.AttackDemage, RaceType.Protoss)
         {
-            get { return Colossus.AttackDemage; }
-        }
-
-        public override RaceType Race
-        {
-            get { return RaceType.Protoss; }
-        }
-
-        public void Attack(IGameObject obj)
-        {
-            obj.Health -= this.AttackDmg;
-        }
-
-        public void FindObjectToAttack(System.Collections.Generic.IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
-        {
-            throw new NotImplementedException();
         }
     }
 }

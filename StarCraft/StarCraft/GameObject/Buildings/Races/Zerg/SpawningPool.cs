@@ -4,15 +4,9 @@
 
     public class SpawningPool : Building
     {
-        public SpawningPool(Position position, string owner, int mineralCost, int gasCost, int sloat)
-            : base(position, owner, mineralCost, gasCost, sloat)
+        public SpawningPool(Position position, string name, int mineralCost, int gasCost, int sloat)
+            : base(position, name, mineralCost, gasCost, 750, RaceType.Zerg)
         {
-            this.Health = 750;
-        }
-
-        public override RaceType Race
-        {
-            get { return RaceType.Zerg; }
         }
     }
 }

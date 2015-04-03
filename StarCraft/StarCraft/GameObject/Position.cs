@@ -1,5 +1,7 @@
 ﻿namespace StarCraft.GameObject
 {
+    using System;
+
     public struct Position
     {
         public readonly int X;
@@ -33,8 +35,8 @@
 
         public static Position Parse(string pointString)
         {
-            string coordinatesPairString = pointString.Substring(1, pointString.Length - 2);
-            string[] coordinates = coordinatesPairString.Split(',');
+            //string coordinatesPairString = pointString.Substring(1, pointString.Length - 2);
+            string[] coordinates = pointString.Split(new[] { ' ', ',', '.' }, StringSplitOptions.RemoveEmptyEntries);
             return new Position(coordinates[0], coordinates[1]);
         }
 

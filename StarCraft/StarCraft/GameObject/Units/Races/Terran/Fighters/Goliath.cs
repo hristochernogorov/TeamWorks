@@ -4,32 +4,11 @@
 
     using StarCraft.Interfaces;
 
-    public class Goliath : Unit, IFighter
+    public class Goliath : Unit
     {
-        public Goliath(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Goliath(Position position, string name)
+            : base(position, name, 100, 20, 2, 125, 40, RaceType.Terran)
         {
-            this.Health = 125;
-        }
-
-        public int AttackDmg
-        {
-            get { return 20; }
-        }
-
-        public override RaceType Race
-        {
-            get { return RaceType.Terran; }
-        }
-
-        public void Attack(IGameObject obj)
-        {
-            obj.Health -= this.AttackDmg;
-        }
-
-        public void FindObjectToAttack(System.Collections.Generic.IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
-        {
-            throw new NotImplementedException();
         }
     }
 }

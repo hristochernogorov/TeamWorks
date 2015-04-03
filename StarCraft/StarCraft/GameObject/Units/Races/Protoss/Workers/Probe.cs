@@ -4,27 +4,11 @@
 
     using StarCraft.Interfaces;
 
-    public class Probe : Unit, IGatherer
+    public class Probe : Gatherer
     {
-        public Probe(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Probe(Position position, string name)
+            : base(position, name, RaceType.Protoss)
         {
-            this.Health = 20;
-        }
-
-        public override RaceType Race
-        {
-            get { return RaceType.Protoss; }
-        }
-
-        public bool CollectResources(ResourceType resource)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Work(ResourceType resource)
-        {
-            throw new NotImplementedException();
         }
     }
 }

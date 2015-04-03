@@ -4,15 +4,11 @@
 
     public class Gateway : Building
     {
-        public Gateway(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Gateway(Position position, string name)
+            : base(position, name, 100, 20, 500, RaceType.Protoss)
         {
-           this.Health = 500;
         }
 
-        public override RaceType Race
-        {
-            get { return RaceType.Protoss; }
-        }
+        
     }
 }

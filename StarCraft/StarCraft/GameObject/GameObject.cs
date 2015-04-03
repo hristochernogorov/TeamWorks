@@ -7,27 +7,30 @@
     [Author("Todor Dimitrov")]
     public abstract class GameObject : IGameObject
     {
-        private string owner;
+        private string name;
         private int mineralCost;
         private int gasCost;
         private int sloteTakes;
         private Position position;
 
-        public GameObject(Position position, string owner, int mineralCost, int gasCost, int sloat)
+        public GameObject(Position position, string name, int mineralCost, int gasCost, int sloat, int health, RaceType race)
         {
             this.Position = position;
-            this.Owner = owner;
-            this.Health = 0;
+            this.Name = name;
+            this.Health = health;
             this.MineralCost = mineralCost;
             this.GasCost = gasCost;
             this.Sloat = sloat;
+            this.Race = race;
         }
 
-        public int Health { get; set; }
-        
+        public int Health { get;  set; }
+
+        public RaceType Race { get; private set; }
+
         public int MineralCost
         {
-            get 
+            get
             {
                 return this.mineralCost;
             }
@@ -45,14 +48,14 @@
 
         public int GasCost
         {
-            get 
+            get
             {
                 return this.gasCost;
             }
 
             protected set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new ArgumentOutOfRangeException("Game object gas cost should be greater by zero");
                 }
@@ -63,7 +66,7 @@
 
         public int Sloat
         {
-            get 
+            get
             {
                 return this.sloteTakes;
             }
@@ -79,11 +82,11 @@
             }
         }
 
-        public string Owner
+        public string Name
         {
             // TODO: Validation
-            get { return this.owner; }
-            protected set { this.owner = value; }
+            get { return this.name; }
+            protected set { this.name = value; }
         }
 
         public Position Position
@@ -102,5 +105,8 @@
         {
             this.Health -= damage;
         }
+
+
+
     }
 }

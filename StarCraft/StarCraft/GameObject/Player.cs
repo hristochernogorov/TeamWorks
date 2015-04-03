@@ -4,7 +4,7 @@
 
     using StarCraft.Interfaces;
 
-    // TODO Secure programming
+    // TODO Defencive programming
     public class Player : IPlayer
     {
         private string name;
@@ -16,8 +16,11 @@
         private ICollection<IFighter> fighters;
         private ICollection<IGatherer> gatherers;
 
-        public Player(string name)
+        public Player(string name, RaceType raceType, Position position)
         {
+            this.Name = name;
+            this.RaceType = raceType;
+            this.Position = position;
             this.gameObjects = new List<IGameObject>();
             this.fighters = new List<IFighter>();
             this.gatherers = new List<IGatherer>();
@@ -35,6 +38,10 @@
                 this.name = value;
             }
         }
+
+        public RaceType RaceType { get; private set; }
+
+        public Position Position { get; private set; }
 
         public int EmptySlots
         {
@@ -165,6 +172,21 @@
         public void RemoveFullSlotsSlots(int slots)
         {
             this.FullSlots -= slots;
+        }
+
+        public void AddGatherer(IGatherer gatherer)
+        {
+            this.gatherers.Add(gatherer);
+        }
+
+        public void AddFighter(IFighter fighter)
+        {
+            this.fighters.Add(fighter);
+        }
+
+        public void AddGameObject(IGameObject gameObject)
+        {
+            this.GameObjects.Add(gameObject);
         }
     }
 }

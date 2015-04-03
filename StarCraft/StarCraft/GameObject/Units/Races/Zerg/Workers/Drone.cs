@@ -4,27 +4,12 @@
 
     using StarCraft.Interfaces;
 
-    public class Drone : Unit, IGatherer
+    public class Drone : Gatherer
     {
-        public Drone(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Drone(Position position, string owner)
+            : base(position, owner, RaceType.Zerg)
         {
-            this.Health = 40;
-        }
-
-        public override RaceType Race
-        {
-            get { return RaceType.Zerg; }
-        }
-
-        public bool CollectResources(ResourceType resource)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Work(ResourceType resource)
-        {
-            throw new NotImplementedException();
+          
         }
     }
 }

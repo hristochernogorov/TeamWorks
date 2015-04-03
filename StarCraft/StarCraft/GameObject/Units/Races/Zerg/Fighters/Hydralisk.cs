@@ -4,32 +4,13 @@
 
     using StarCraft.Interfaces;
 
-    public class Hydralisk : Unit, IFighter
+    public class Hydralisk : Unit
     {
-        public Hydralisk(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Hydralisk(Position position, string name)
+            : base(position, name, 20, 20, 1, 80, 12, RaceType.Zerg)
         {
-            this.Health = 80;
         }
 
-        public override RaceType Race
-        {
-            get { return RaceType.Zerg; }
-        }
-
-        public int AttackDmg
-        {
-            get { return 12; }
-        }
-
-        public void Attack(IGameObject obj)
-        {
-            obj.Health -= this.AttackDmg;
-        }
-
-        public void FindObjectToAttack(System.Collections.Generic.IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

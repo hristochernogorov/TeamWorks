@@ -6,30 +6,9 @@
 
     public class Dragoon : Unit, IFighter
     {
-        public Dragoon(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Dragoon(Position position, string name)
+            : base(position, name, 100, 20, 4, 800, 200, RaceType.Protoss)
         {
-            this.Health = 80;
-        }
-
-        public int AttackDmg
-        {
-            get { return 10; }
-        }
-
-        public override RaceType Race
-        {
-            get { return RaceType.Protoss; }
-        }
-
-        public void Attack(IGameObject obj)
-        {
-            obj.Health -= this.AttackDmg;
-        }
-
-        public void FindObjectToAttack(System.Collections.Generic.IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
-        {
-            throw new NotImplementedException();
         }
     }
 }

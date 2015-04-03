@@ -4,32 +4,13 @@
 
     using StarCraft.Interfaces;
 
-    public class Guardian : Unit, IFighter
+    public class Guardian : Unit
     {
-        public Guardian(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Guardian(Position position, string name)
+            : base(position, name, 40, 0, 2, 100, 20, RaceType.Zerg)
         {
-            this.Health = 100;
         }
 
-        public int AttackDmg
-        {
-            get { return 20; }
-        }
-
-        public override RaceType Race
-        {
-            get { return RaceType.Zerg; }
-        }
-        
-        public void Attack(IGameObject obj)
-        {
-            obj.Health -= this.AttackDmg;
-        }
-
-        public void FindObjectToAttack(System.Collections.Generic.IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

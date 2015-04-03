@@ -4,15 +4,10 @@
 
     public class Hatchery : Building
     {
-        public Hatchery(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Hatchery(Position position, string name)
+            : base(position, name, 100, 20, 1250, RaceType.Zerg)
         {
-           this.Health = 1250;
-        }
 
-        public override RaceType Race
-        {
-            get { return RaceType.Zerg; }
         }
     }
 }

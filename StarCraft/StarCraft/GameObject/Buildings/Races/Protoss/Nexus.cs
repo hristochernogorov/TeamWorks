@@ -4,15 +4,11 @@
 
     public class Nexus : Building
     {
-        public Nexus(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Nexus(Position position, string name)
+            : base(position, name, 100, 100, 1000, RaceType.Protoss)
         {
-           this.Health = 1000;
         }
 
-        public override RaceType Race
-        {
-            get { return RaceType.Protoss; }
-        }
+       
     }
 }

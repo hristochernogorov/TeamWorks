@@ -4,32 +4,11 @@
 
     using StarCraft.Interfaces;
 
-    public class Hellbat : Unit, IFighter
+    public class Firebat : Unit
     {
-        public Hellbat(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Firebat(Position position, string name)
+            : base(position, name, 40, 0, 2, 135, 40, RaceType.Terran)
         {
-            this.Health = 135;
-        }
-
-        public int AttackDmg
-        {
-            get { return 18; }
-        }
-
-        public override RaceType Race
-        {
-            get { return RaceType.Terran; }
-        }
-
-        public void Attack(IGameObject obj)
-        {
-            obj.Health -= this.AttackDmg;
-        }
-
-        public void FindObjectToAttack(System.Collections.Generic.IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
-        {
-            throw new NotImplementedException();
         }
     }
 }

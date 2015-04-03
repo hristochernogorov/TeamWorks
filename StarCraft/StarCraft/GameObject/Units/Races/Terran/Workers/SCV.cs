@@ -4,27 +4,11 @@
 
     using StarCraft.Interfaces;
 
-    public class SCV : Unit, IGatherer
+    public class SCV : Gatherer
     {
-        public SCV(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public SCV(Position position, string name)
+            : base(position, name, RaceType.Terran)
         {
-            this.Health = 45;
-        }
-
-        public override RaceType Race
-        {
-            get { return RaceType.Terran; }
-        } 
-
-        public bool CollectResources(ResourceType resource)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Work(ResourceType resource)
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -4,15 +4,11 @@
 
     public class CommandCenter : Building
     {
-        public CommandCenter(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public CommandCenter(Position position, string name)
+            : base(position, name, 100, 20, 1500, RaceType.Terran)
         {
-            this.Health = 1500;
         }
 
-        public override RaceType Race
-        {
-            get { return RaceType.Terran; }
-        }
+
     }
 }

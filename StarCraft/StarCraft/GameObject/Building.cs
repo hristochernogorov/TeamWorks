@@ -2,13 +2,12 @@
 {
     using StarCraft.Interfaces;
 
-    public abstract class Building : GameObject, IRace
+    public abstract class Building : GameObject
     {
-       public Building(Position position, string owner, int mineralCost, int gasCost, int sloat)
-           : base(position, owner, mineralCost, gasCost, sloat)
+        public Building(Position position, string name, int mineralCost, int gasCost, int health, RaceType race)
+            : base(position, name, mineralCost, gasCost, 0, health, race)
        {
        }
 
-       public abstract RaceType Race { get; }
     }
 }
