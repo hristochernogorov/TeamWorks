@@ -5,6 +5,7 @@
     using System.Threading;
 
     using StarCraft.GameObject;
+    using StarCraft.GameObject.Units.Races.Protoss.Fighters;
     using StarCraft.Interfaces;
 
     public class StarCraftEngine
@@ -88,17 +89,33 @@
                     this.ProceedCreateCommand(command, player);
                     break;
                 case CommandsConstant.Attack:
-                    this.ProceedCreateCommand(command, player);
+                    this.ProceedAttackCommand(command, player);
                     break;
                 default:
                     break;
             }
         }
 
+        // TODO implement attack command
+        private void ProceedAttackCommand(string[] command, IPlayer player)
+        {
+            throw new NotImplementedException();
+        }
+
         // TODO implement create command
         private void ProceedCreateCommand(string[] command, IPlayer player)
         {
-            throw new NotImplementedException();
+            switch (command[2])
+            {
+                case "colossus":
+                    {
+                        Position position = Position.Parse(command[3]);
+
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

@@ -6,6 +6,7 @@
 
     public class Colossus : Unit, IFighter
     {
+        private const int AttackDemage = 15;
         public Colossus(Position position, string owner, int mineralCost, int gasCost, int sloat)
             : base(position, owner, mineralCost, gasCost, sloat)
         {
@@ -14,7 +15,7 @@
 
         public int AttackDmg
         {
-            get { return 15; }
+            get { return Colossus.AttackDemage; }
         }
 
         public override RaceType Race
