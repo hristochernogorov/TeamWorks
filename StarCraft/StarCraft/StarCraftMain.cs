@@ -10,7 +10,10 @@
         public static void Main()
         {
             var keyboard = new KayboardInterface();
-            StarCraftEngine engine = new StarCraftEngine(new Player("a"), new Player("as"), keyboard);
+
+            StarCraftEngine engine = new StarCraftEngine(new Player("a", RaceType.Protoss, Position.Parse("1,1")),
+                                                         new Player("b", RaceType.Zerg, Position.Parse("2,2")), 
+                                                          keyboard);
 
             // Event. listen for enter kay press
             keyboard.OnActionPressed += (sender, eventInfo) =>
@@ -22,9 +25,10 @@
                      engine.ParceCommand(input);
                 }
                
-                Console.Clear();
+               // Console.Clear();
             };
 
+            engine.InitialiseGame();
             // Start engine
             engine.Run();
         }
