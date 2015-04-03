@@ -8,7 +8,8 @@
         int MineralCost { get; }
         int GasCost { get; }
         int Sloat { get; }
-        string Owner { get; }
+        RaceType Race { get; }
+        string Name { get; }
         Position Position { get; }
         bool IsAlive();
         void DamageTaken(int damage);

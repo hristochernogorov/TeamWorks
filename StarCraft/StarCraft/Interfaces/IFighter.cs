@@ -6,7 +6,7 @@
     {
         int AttackDmg { get; }
 
-        void Attack(IGameObject obj);
+        void ResponseToAttackCommand(IGameObject objectToAttack);
 
         void FindObjectToAttack(IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition);
     }
