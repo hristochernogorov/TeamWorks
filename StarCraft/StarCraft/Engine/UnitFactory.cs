@@ -1,8 +1,12 @@
 ﻿namespace StarCraft.Engine
 {
-    using GameObject.Units.Races.Protoss.Workers;
-    using GameObject.Units.Races.Terran.Workers;
-    using GameObject.Units.Races.Zerg.Workers;
+    using StarCraft.GameObject.Units.Races.Protoss.Workers;
+    using StarCraft.GameObject.Units.Races.Terran.Workers;
+    using StarCraft.GameObject.Units.Races.Zerg.Workers;
+    using StarCraft.GameObject.Units.Races.Protoss.Fighters;
+    using StarCraft.GameObject.Units.Races.Terran.Fighters;
+    using StarCraft.GameObject.Units.Races.Zerg.Fighters;
+
     using StarCraft.GameObject;
     using StarCraft.Interfaces;
     using StarCraft.CustomAttributes;
@@ -23,9 +27,46 @@
             return new Drone(position, name);
         }
 
-        public IFighter CreateFighterUnit(Position position, string namer)
+        public IFighter CreateColossus(Position position, string name)
         {
-            throw new System.NotImplementedException();
+            return new Colossus(position, name);
+        }
+
+        public IFighter CreateDragoon(Position position, string name)
+        {
+            return new Dragoon(position, name);
+        }
+
+        public IFighter CreateZealot(Position position, string name)
+        {
+            return new Zealot(position, name);
+        }
+
+        public IFighter CreateFirebat(Position position, string name)
+        {
+            return new Firebat(position, name);
+        }
+
+        public IFighter CreateGoliath(Position position, string name)
+        {
+            return new Goliath(position, name);
+        }
+        public IFighter CreateMarine(Position position, string name)
+        {
+            return new Marine(position, name);
+        }
+        public IFighter CreateGuardian(Position position, string name)
+        {
+            return new Guardian(position, name);
+        }
+        public IFighter CreateHydralisk(Position position, string name)
+        {
+            return new Hydralisk(position, name);
+        }
+
+        public IFighter CreateZergling(Position position, string name)
+        {
+            return new Zergling(position, name);
         }
     }
 }
