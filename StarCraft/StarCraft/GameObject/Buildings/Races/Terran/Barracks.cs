@@ -4,8 +4,11 @@
 
     public class Barracks : Building
     {
+        private const int TerranBarracksMineralCost = 100;
+        private const int TerranBarracksGasCost = 20;
+        private const int TerranBarracksHealth = 1000;
         public Barracks(Position position, string owner)
-            : base(position, owner, 100, 20, 1000, RaceType.Terran)
+            : base(position, owner, TerranBarracksMineralCost, TerranBarracksGasCost, TerranBarracksHealth, RaceType.Terran)
         {
         }
 

@@ -6,8 +6,13 @@
 
     public class Dragoon : Unit, IFighter
     {
+        private const int ProtossDragoonAttackDemage = 20;
+        private const int ProtossDragoonMineralCost = 100;
+        private const int ProtossDragoonGasCost = 20;
+        private const int ProtossDragoonHealth = 800;
+        private const int ProtossDragoonSloat = 4;
         public Dragoon(Position position, string name)
-            : base(position, name, 100, 20, 4, 800, 200, RaceType.Protoss)
+            : base(position, name, ProtossDragoonMineralCost, ProtossDragoonGasCost, ProtossDragoonSloat, ProtossDragoonHealth, ProtossDragoonAttackDemage, RaceType.Protoss)
         {
         }
     }

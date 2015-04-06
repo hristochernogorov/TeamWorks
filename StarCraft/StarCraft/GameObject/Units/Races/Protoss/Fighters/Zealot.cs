@@ -6,8 +6,13 @@
 
     public class Zealot : Unit, IFighter
     {
+        private const int ProtossZealotAttackDemage = 40;
+        private const int ProtossZealotMineralCost = 60;
+        private const int ProtossZealotGasCost = 0;
+        private const int ProtossZealotHealth = 100;
+        private const int ProtossZealotSloat = 1;
         public Zealot(Position position, string name)
-            : base(position, name, 60, 0, 1, 100, 40, RaceType.Protoss)
+            : base(position, name, ProtossZealotMineralCost, ProtossZealotGasCost, ProtossZealotSloat, ProtossZealotHealth, ProtossZealotAttackDemage, RaceType.Protoss)
         {
         }
 

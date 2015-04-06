@@ -4,8 +4,11 @@
 
     public class Hatchery : Building
     {
+        private const int ZergHatcheryMineralCost = 100;
+        private const int ZergHatcheryGasCost = 20;
+        private const int ZergHatcheryHealth = 1250;
         public Hatchery(Position position, string name)
-            : base(position, name, 100, 20, 1250, RaceType.Zerg)
+            : base(position, name, ZergHatcheryMineralCost, ZergHatcheryGasCost, ZergHatcheryHealth, RaceType.Zerg)
         {
 
         }
