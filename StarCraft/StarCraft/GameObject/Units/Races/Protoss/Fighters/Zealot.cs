@@ -11,6 +11,7 @@
         private const int ProtossZealotGasCost = 0;
         private const int ProtossZealotHealth = 100;
         private const int ProtossZealotSloat = 1;
+
         public Zealot(Position position, string name)
             : base(position, name, ProtossZealotMineralCost, ProtossZealotGasCost, ProtossZealotSloat, ProtossZealotHealth, ProtossZealotAttackDemage, RaceType.Protoss)
         {

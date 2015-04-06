@@ -11,6 +11,7 @@
         private const int ProtossDragoonGasCost = 20;
         private const int ProtossDragoonHealth = 800;
         private const int ProtossDragoonSloat = 4;
+
         public Dragoon(Position position, string name)
             : base(position, name, ProtossDragoonMineralCost, ProtossDragoonGasCost, ProtossDragoonSloat, ProtossDragoonHealth, ProtossDragoonAttackDemage, RaceType.Protoss)
         {

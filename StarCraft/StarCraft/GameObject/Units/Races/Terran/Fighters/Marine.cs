@@ -11,6 +11,7 @@
         private const int TerranMarineGasCost = 0;
         private const int TerranMarineHealth = 45;
         private const int TerranMarineSloat = 2;
+
         public Marine(Position position, string name)
             : base(position, name, TerranMarineMineralCost, TerranMarineGasCost, TerranMarineSloat, TerranMarineHealth, TerranMarineAttackDemage, RaceType.Terran)
         {

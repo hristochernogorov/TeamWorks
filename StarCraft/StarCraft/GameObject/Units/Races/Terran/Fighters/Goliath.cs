@@ -11,6 +11,7 @@
         private const int TerranGoliathGasCost = 20;
         private const int TerranGoliathHealth = 125;
         private const int TerranGoliathSloat = 2;
+
         public Goliath(Position position, string name)
             : base(position, name, TerranGoliathMineralCost, TerranGoliathGasCost, TerranGoliathSloat, TerranGoliathHealth, TerranGoliathAttackDemage, RaceType.Terran)
         {

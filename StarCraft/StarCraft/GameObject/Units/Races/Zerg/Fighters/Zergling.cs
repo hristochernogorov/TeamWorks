@@ -11,6 +11,7 @@
         private const int ZergZerglingGasCost = 0;
         private const int ZergZerglingHealth = 35;
         private const int ZergZerglingSloat = 2;
+
         public Zergling(Position position, string name)
             : base(position, name, ZergZerglingMineralCost, ZergZerglingGasCost, ZergZerglingSloat, ZergZerglingHealth, ZergZerglingAttackDemage, RaceType.Zerg)
         {

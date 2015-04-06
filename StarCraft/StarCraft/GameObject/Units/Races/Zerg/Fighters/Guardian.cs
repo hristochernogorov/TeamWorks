@@ -11,6 +11,7 @@
         private const int ZergGuardianGasCost = 0;
         private const int ZergGuardianHealth = 100;
         private const int ZergGuardianSloat = 2;
+
         public Guardian(Position position, string name)
             : base(position, name, ZergGuardianMineralCost, ZergGuardianGasCost, ZergGuardianSloat, ZergGuardianHealth, ZergGuardianAttackDemage, RaceType.Zerg)
         {
