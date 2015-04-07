@@ -84,16 +84,34 @@
 
         public string Name
         {
-            // TODO: Validation
-            get { return this.name; }
-            protected set { this.name = value; }
+            get 
+            {
+                return this.name;
+            }
+            protected set 
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException(string.Format("{0} name cannot be null or empty", this.GetType().Name));
+                }
+                this.name = value;
+            }
         }
 
         public Position Position
         {
-            // TODO: Validation
-            get { return this.position; }
-            protected set { this.position = value; }
+            get 
+            { 
+                return this.position;
+            }
+            protected set 
+            {
+                if (value.X < 0 || value.Y < 0)
+                {
+                    throw new ArgumentOutOfRangeException(string.Format("{0} position is invalid", this.GetType().Name));
+                }
+                this.position = value;
+            }
         }
 
         public bool IsAlive()
