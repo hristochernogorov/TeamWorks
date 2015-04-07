@@ -65,14 +65,17 @@
     <Compile Include="GameObject\Unit.cs" />
     <Compile Include="GameObject\Units\Races\Protoss\Fighters\Colossus.cs" />
     <Compile Include="GameObject\Units\Races\Protoss\Fighters\Dragoon.cs" />
+    <Compile Include="GameObject\Units\Races\Protoss\Fighters\VoidRay.cs" />
     <Compile Include="GameObject\Units\Races\Protoss\Fighters\Zealot.cs" />
     <Compile Include="GameObject\Units\Races\Protoss\Workers\Probe.cs" />
+    <Compile Include="GameObject\Units\Races\Terran\Fighters\Battlecruiser.cs" />
     <Compile Include="GameObject\Units\Races\Terran\Fighters\Firebat.cs" />
     <Compile Include="GameObject\Units\Races\Terran\Fighters\Goliath.cs" />
     <Compile Include="GameObject\Units\Races\Terran\Fighters\Marine.cs" />
     <Compile Include="GameObject\Units\Races\Terran\Workers\SCV.cs" />
     <Compile Include="GameObject\Units\Races\Zerg\Fighters\Guardian.cs" />
     <Compile Include="GameObject\Units\Races\Zerg\Fighters\Hydralisk.cs" />
+    <Compile Include="GameObject\Units\Races\Zerg\Fighters\Mutalisk.cs" />
     <Compile Include="GameObject\Units\Races\Zerg\Fighters\Zergling.cs" />
     <Compile Include="GameObject\Units\Races\Zerg\Workers\Drone.cs" />
     <Compile Include="GameObject\UnitType.cs" />
