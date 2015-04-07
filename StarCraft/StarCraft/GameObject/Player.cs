@@ -23,8 +23,8 @@
             this.RaceType = raceType;
             this.Position = position;
             this.GameObjects = new List<IGameObject>();
-            this.Fighters = new List<IFighter>();
-            this.Gatherers = new List<IGatherer>();
+            this.Fighter = new List<IFighter>();
+            this.Gatherer = new List<IGatherer>();
         }
 
         public string Name
@@ -127,7 +127,7 @@
             }
         }
 
-        public ICollection<IFighter> Fighters
+        public ICollection<IFighter> Fighter
         {
             get
             {
@@ -141,7 +141,7 @@
             }
         }
 
-        public ICollection<IGatherer> Gatherers
+        public ICollection<IGatherer> Gatherer
         {
             get
             {
