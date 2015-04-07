@@ -25,7 +25,7 @@ namespace StarCraft.Common
 
         public static void CheckValueIsNegativ<T>(T value, string message = "") where T : struct,IComparable
         {
-            if (value.CompareTo(0) < 0)
+            if (value.CompareTo(default(T)) < 0)
             {
                 throw new ArgumentOutOfRangeException(message);
             }
