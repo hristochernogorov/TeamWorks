@@ -19,11 +19,11 @@ namespace StarCraft.Interfaces
         IFighter CreateHydralisk(Position position, string name);
         IFighter CreateZergling(Position position, string name);
 
-        Building CreateGateway(Position position, string name);
-        Building CreateNexus(Position position, string name);
-        Building CreateBarracks(Position position, string name);
-        Building CreateCommandCenter(Position position, string name);
-        Building CreateHatchery(Position position, string name);
-        Building CreateSpawningPool(Position position, string name);
+        IGameObject CreateGateway(Position position, string name);
+        IGameObject CreateNexus(Position position, string name);
+        IGameObject CreateBarracks(Position position, string name);
+        IGameObject CreateCommandCenter(Position position, string name);
+        IGameObject CreateHatchery(Position position, string name);
+        IGameObject CreateSpawningPool(Position position, string name);
     }
 }
