@@ -76,6 +76,7 @@
     <Compile Include="GameObject\Units\Races\Zerg\Fighters\Zergling.cs" />
     <Compile Include="GameObject\Units\Races\Zerg\Workers\Drone.cs" />
     <Compile Include="GameObject\UnitType.cs" />
+    <Compile Include="Interfaces\IBuildingFactory.cs" />
     <Compile Include="Interfaces\IFighter.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Interfaces\IGatherer.cs" />

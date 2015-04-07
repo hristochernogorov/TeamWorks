@@ -5,8 +5,9 @@ namespace StarCraft.Engine
     using StarCraft.GameObject.Buildings.Races.Protoss;
     using StarCraft.GameObject.Buildings.Races.Terran;
     using StarCraft.GameObject.Buildings.Races.Zerg;
+    using StarCraft.Interfaces;
 
-    public class BuildingFactory
+    public class BuildingFactory : IBuildingFactory
     {
         public Building CreateGateway(Position position, string name)
         {
