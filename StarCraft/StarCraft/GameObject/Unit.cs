@@ -55,7 +55,8 @@
             }
             else
             {
-                if (this.UnitType == (obj as Unit).unitType)
+               var unit = obj as Unit;
+                if (this.UnitType == unit.UnitType)
                 {
                     this.GoTo(obj.Position);
                     this.Attack(obj);
@@ -63,20 +64,18 @@
             }
         }
 
-        public virtual void FindObjectToAttack(IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
+        public virtual IGameObject FindObjectToAttack(IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
         {
             var objectToAtaack = opsitePlayerUnitOnSamePossition.FirstOrDefault(o => (o is Unit) && (o as Unit).unitType == this.unitType);
             if (objectToAtaack != null)
             {
-                this.Attack(objectToAtaack);
+                return objectToAtaack;
             }
             else
             {
                 objectToAtaack = opsitePlayerUnitOnSamePossition.FirstOrDefault(o => o is Building);
-                if (objectToAtaack != null)
-                {
-                    this.Attack(objectToAtaack);
-                }
+
+                return objectToAtaack;
 
             }
         }

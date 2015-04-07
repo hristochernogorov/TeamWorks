@@ -3,11 +3,13 @@
     using System;
     using System.Linq;
     using System.Reflection;
+    using System.Security.Cryptography.X509Certificates;
     using System.Text;
     using System.Threading;
 
     using StarCraft.GameObject;
     using StarCraft.Interfaces;
+    using StarCraft.Extensions;
 
     public class StarCraftEngine
     {
@@ -18,7 +20,8 @@
         private IPlayer playerOne;
         private IPlayer playerTwo;
         private IUserInterfacecs userInterface;
-        private UnitFactory factory = new UnitFactory();
+        private IUnitFactory factory = new UnitFactory();
+        private StringBuilder output = new StringBuilder();
 
         public StarCraftEngine(IPlayer playerOne, IPlayer playerTwo, IUserInterfacecs userInterface)
         {
@@ -44,7 +47,19 @@
                 Thread.Sleep(200);
 
                 this.userInterface.ProcessInput();
+                if (!this.output.IsEmpty())
+                {
+                    userInterface.VisualaseInformation(this.output.ToString().TrimEnd());
+                    this.output.Clear();
+                }
                 this.Update(this.playerOne, this.playerTwo);
+              //  this.Update(this.playerTwo, this.playerOne);
+
+                if (!this.output.IsEmpty())
+                {
+                    userInterface.VisualaseInformation(this.output.ToString().TrimEnd());
+                    this.output.Clear();
+                }
                 this.Update(this.playerTwo, this.playerOne);
             }
         }
@@ -61,43 +76,64 @@
             switch (player.RaceType)
             {
                 case RaceType.Protoss:
-                    worker = factory.CreateProbe(player.Position,CommandsConstant.WorkerWithNoName);
+                    worker = factory.CreateProbe(player.Position, CommandsConstant.WorkerWithNoName);
                     worker.Work(ResourceType.Minerals);
-                    player.AddGatherer(worker);
+                    player.AddGameObject(worker);
                     break;
                 case RaceType.Terran:
                     worker = factory.CreateScv(player.Position, CommandsConstant.WorkerWithNoName);
                     worker.Work(ResourceType.Minerals);
-                    player.AddGatherer(worker);
+                    player.AddGameObject(worker);
                     break;
                 case RaceType.Zerg:
-                    worker = factory.CreateDrone(player.Position,CommandsConstant.WorkerWithNoName);
+                    worker = factory.CreateDrone(player.Position, CommandsConstant.WorkerWithNoName);
                     worker.Work(ResourceType.Minerals);
-                    player.AddGatherer(worker);
+                    player.AddGameObject(worker);
                     break;
             }
         }
 
         private void Update(IPlayer player, IPlayer opositePlayer)
         {
-            foreach (var unit in player.Gatherer)
-            {
-                if (unit.CollectResources(ResourceType.Minerals))
-                {
-                    this.playerOne.GetMineral(MineralPerCycle);
-                }
 
-                if (unit.CollectResources(ResourceType.Gas))
+
+            foreach (var unit in player.GameObjects)
+            {
+                if (unit is IGatherer)
                 {
-                    this.playerOne.GetGas(GasPerCycle);
+                    var worker = unit as IGatherer;
+
+                    if (worker.CollectResources(ResourceType.Minerals))
+                    {
+                        player.GetMineral(MineralPerCycle);
+                    }
+
+                    if (worker.CollectResources(ResourceType.Gas))
+                    {
+                        player.GetGas(GasPerCycle);
+                    }
+                }
+                if (unit is IFighter)
+                {
+                    var fighter = unit as IFighter;
+
+                    var opsitePlayerUnitOnSamePossition = opositePlayer.GameObjects.Where(x => fighter.Position == x.Position);
+                    var victim = fighter.FindObjectToAttack(opsitePlayerUnitOnSamePossition);
+                    if (victim != null)
+                    {
+                        fighter.Attack(victim);
+                        this.output.AppendLine(string.Format(CommandsConstant.AttackMessage, fighter.Name, fighter.AttackDmg, victim.Name));
+                    }
                 }
             }
-
-            foreach (var fighter in player.Fighter)
+            foreach (var gameObject in opositePlayer.GameObjects)
             {
-                var opsitePlayerUnitOnSamePossition = opositePlayer.GameObjects.Where(x => fighter.Position == x.Position);
-                fighter.FindObjectToAttack(opsitePlayerUnitOnSamePossition);
+                if (!gameObject.IsAlive())
+                {
+                    this.output.AppendLine(string.Format(CommandsConstant.IsDeadkMessage, gameObject.GetType().Name, gameObject.Name));
+                }
             }
+            opositePlayer.RemoveDestroyGameObject();
         }
 
 
@@ -117,7 +153,7 @@
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                this.output.Append(e.Message);
             }
         }
 
@@ -143,7 +179,7 @@
 
         private void ProceedCollectCommand(string[] command, IPlayer player)
         {
-            var worker = player.Gatherer.FirstOrDefault(f => f.Name == command[2]);
+            var worker = player.GameObjects.FirstOrDefault(f => (f is IGatherer) && f.Name == command[2]);
             ResourceType resource;
             if (command[3] == ResourceType.Minerals.ToString())
             {
@@ -153,7 +189,8 @@
             {
                 resource = ResourceType.Gas;
             }
-            worker.Work(resource);
+
+            (worker as IGatherer).Work(resource);
 
         }
 
@@ -162,7 +199,11 @@
             var unit = player.GameObjects.FirstOrDefault(u => (u is IMovable) && u.Name == command[2]);
             if (unit != null)
             {
-                (unit as IMovable).GoTo(Position.Parse(command[3]));
+                var position = Position.Parse(command[3]);
+                var movable = (unit as IMovable);
+                movable.GoTo(position);
+
+                this.output.AppendLine(string.Format(CommandsConstant.GoToPositionkMessage, movable.Name, position));
             }
         }
 
@@ -175,7 +216,7 @@
                 string methodName = GetMethodName(command);
                 Type type = typeof(UnitFactory);
                 MethodInfo method = type.GetMethod(methodName);
-                result = (Gatherer)method.Invoke(factory, new object[] { player.Position, command[4] });
+                result = (IGameObject)method.Invoke(factory, new object[] { player.Position, command[4] });
             }
             catch (Exception)
             {
@@ -193,27 +234,16 @@
                 {
                     throw new Exception(CommandsConstant.NoMinerals);
                 }
+
                 player.GetGas(result.GasCost);
                 player.GetMineral(result.MineralCost);
                 player.AddGameObject(result);
-            }
 
-
-            switch (command[2])
-            {
-                case CommandsConstant.Fighter:
-                    {
-                        player.AddFighter((result as IFighter));
-                    }
-                    break;
-                case CommandsConstant.Worker:
-                    {
-                        var worker = result as IGatherer;
-                        worker.CollectResources(ResourceType.Minerals);
-                        player.AddGatherer((worker));
-
-                    }
-                    break;
+                if (result is IGatherer)
+                {
+                    var worker = result as IGatherer;
+                    worker.CollectResources(ResourceType.Minerals);
+                }
             }
         }
 
@@ -228,13 +258,15 @@
 
         private void ProceedAttackCommand(string[] command, IPlayer player, IPlayer opositePlayer)
         {
-            var unit = player.Fighter.FirstOrDefault(f => f.Name == command[2]);
-            var unitToAttack = opositePlayer.Fighter.FirstOrDefault(f => f.Name == command[3]);
-            if (unit == null && unitToAttack == null)
+            var unit = player.GameObjects.FirstOrDefault(f => f is IFighter && f.Name == command[2]);
+            var unitToAttack = opositePlayer.GameObjects.FirstOrDefault(f => f.Name == command[3]);
+            if (unit == null || unitToAttack == null)
             {
                 throw new Exception(CommandsConstant.InvalidCommand);
             }
-            unit.ResponseToAttackCommand(unitToAttack);
+            var fighter = unit as IFighter;
+            fighter.ResponseToAttackCommand(unitToAttack);
+            this.output.AppendLine(string.Format(CommandsConstant.AttackMessage, fighter.Name, fighter.AttackDmg, unitToAttack.Name));
         }
     }
 }

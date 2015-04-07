@@ -7,5 +7,7 @@
         event EventHandler OnActionPressed;
 
         void ProcessInput();
+
+        void VisualaseInformation(string info);
     }
 }

@@ -14,8 +14,6 @@
         Position Position { get; }
 
         ICollection<IGameObject> GameObjects { get; }
-        ICollection<IFighter> Fighter { get; }
-        ICollection<IGatherer> Gatherer { get; }
 
         void GetMineral(int mineral);
         void GetGas(int slot);
@@ -25,8 +23,7 @@
         void RemoveEmptySlots(int slot);
         void AddFullSlotsSlots(int slot);
         void RemoveFullSlotsSlots(int slot);
-        void AddGatherer(IGatherer gatherer);
-        void AddFighter(IFighter fighter);
         void AddGameObject(IGameObject gameObject);
+        void RemoveDestroyGameObject();
     }
 }

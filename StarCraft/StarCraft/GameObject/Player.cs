@@ -1,7 +1,7 @@
 ﻿namespace StarCraft.GameObject
 {
     using System.Collections.Generic;
-
+    using System.Linq;
     using StarCraft.Interfaces;
     using StarCraft.Common;
 
@@ -14,8 +14,6 @@
         private int mineral;
         private int gas;
         private ICollection<IGameObject> gameObjects;
-        private ICollection<IFighter> fighters;
-        private ICollection<IGatherer> gatherers;
 
         public Player(string name, RaceType raceType, Position position)
         {
@@ -23,8 +21,6 @@
             this.RaceType = raceType;
             this.Position = position;
             this.GameObjects = new List<IGameObject>();
-            this.Fighter = new List<IFighter>();
-            this.Gatherer = new List<IGatherer>();
         }
 
         public string Name
@@ -127,34 +123,6 @@
             }
         }
 
-        public ICollection<IFighter> Fighter
-        {
-            get
-            {
-                return new List<IFighter>(this.fighters);
-            }
-
-            private set
-            {
-                Validator.CheckObjectIsNull(value);
-                this.fighters = value;
-            }
-        }
-
-        public ICollection<IGatherer> Gatherer
-        {
-            get
-            {
-                return new List<IGatherer>(this.gatherers);
-            }
-
-            private set
-            {
-                Validator.CheckObjectIsNull(value);
-                this.gatherers = value;
-            }
-        }
-
         public void GetMineral(int mineral)
         {
             this.Mineral += mineral;
@@ -195,19 +163,14 @@
             this.FullSlots -= slots;
         }
 
-        public void AddGatherer(IGatherer gatherer)
-        {
-            this.gatherers.Add(gatherer);
-        }
-
-        public void AddFighter(IFighter fighter)
-        {
-            this.fighters.Add(fighter);
-        }
-
         public void AddGameObject(IGameObject gameObject)
         {
-            this.GameObjects.Add(gameObject);
+            this.gameObjects.Add(gameObject);
+        }
+
+        public void RemoveDestroyGameObject()
+        {
+            this.gameObjects = this.GameObjects.Where(g => g.IsAlive()).ToList();
         }
     }
 }

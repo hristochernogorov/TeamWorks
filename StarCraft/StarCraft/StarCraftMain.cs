@@ -1,7 +1,7 @@
 ﻿namespace StarCraft
 {
     using System;
-
+    using System.Collections.Generic;
     using StarCraft.Engine;
     using StarCraft.GameObject;
 
@@ -9,10 +9,10 @@
     {
         public static void Main()
         {
-            var keyboard = new KayboardInterface();
+            var keyboard = new UserInterfacecs();
 
             StarCraftEngine engine = new StarCraftEngine(new Player("a", RaceType.Protoss, Position.Parse("1,1")),
-                                                         new Player("b", RaceType.Zerg, Position.Parse("2,2")), 
+                                                         new Player("b", RaceType.Zerg, Position.Parse("2,2")),
                                                           keyboard);
 
             // Event. listen for enter kay press
@@ -22,10 +22,10 @@
                 string input = Console.ReadLine();
                 if (!string.IsNullOrEmpty(input))
                 {
-                     engine.ParceCommand(input);
+                    engine.ParceCommand(input);
                 }
-               
-               // Console.Clear();
+
+                // Console.Clear();
             };
 
             engine.InitialiseGame();

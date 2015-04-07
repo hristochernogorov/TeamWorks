@@ -47,6 +47,7 @@
     <Compile Include="Engine\CommandsConstant.cs" />
     <Compile Include="Engine\StarCraftEngine.cs" />
     <Compile Include="Engine\UnitFactory.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
     <Compile Include="GameObject\Building.cs" />
     <Compile Include="GameObject\Buildings\Races\Protoss\Gateway.cs" />
     <Compile Include="GameObject\Buildings\Races\Protoss\Nexus.cs" />
@@ -57,7 +58,7 @@
     <Compile Include="GameObject\FlyingUnits.cs" />
     <Compile Include="GameObject\GameObject.cs" />
     <Compile Include="GameObject\Gatherer.cs" />
-    <Compile Include="GameObject\KayboardInterface.cs" />
+    <Compile Include="GameObject\UserInterfacecs.cs" />
     <Compile Include="GameObject\Player.cs" />
     <Compile Include="GameObject\Position.cs" />
     <Compile Include="GameObject\RaceType.cs" />

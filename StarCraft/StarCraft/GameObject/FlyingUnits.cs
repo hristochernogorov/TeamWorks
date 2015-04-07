@@ -18,21 +18,18 @@
             this.Attack(obj);
         }
 
-        public override void FindObjectToAttack(IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
+        public override IGameObject FindObjectToAttack(IEnumerable<IGameObject> opsitePlayerUnitOnSamePossition)
         {
             var objectToAtaack = opsitePlayerUnitOnSamePossition.FirstOrDefault(o => (o is Unit));
             if (objectToAtaack != null)
             {
-                this.Attack(objectToAtaack);
+                return objectToAtaack;
             }
             else
             {
                 objectToAtaack = opsitePlayerUnitOnSamePossition.FirstOrDefault(o => o is Building);
-                if (objectToAtaack != null)
-                {
-                    this.Attack(objectToAtaack);
-                }
 
+                return objectToAtaack;
             }
         }
 
