@@ -10,6 +10,9 @@
     using StarCraft.GameObject;
     using StarCraft.Interfaces;
     using StarCraft.CustomAttributes;
+    using StarCraft.GameObject.Buildings.Races.Protoss;
+    using StarCraft.GameObject.Buildings.Races.Terran;
+    using StarCraft.GameObject.Buildings.Races.Zerg;
 
     [Author("Todor Dimitrov")]
     public class UnitFactory : IUnitFactory
@@ -72,32 +75,32 @@
 
         public Building CreateGateway(Position position, string name)
         {
-            throw new System.NotImplementedException();
+            return new Gateway(position, name);
         }
 
         public Building CreateNexus(Position position, string name)
         {
-            throw new System.NotImplementedException();
+            return new Nexus(position, name);
         }
 
         public Building CreateBarracks(Position position, string name)
         {
-            throw new System.NotImplementedException();
+            return new Barracks(position, name);
         }
 
         public Building CreateCommandCenter(Position position, string name)
         {
-            throw new System.NotImplementedException();
+            return new CommandCenter(position, name);
         }
 
         public Building CreateHatchery(Position position, string name)
         {
-            throw new System.NotImplementedException();
+            return new Hatchery(position, name);
         }
 
         public Building CreateSpawningPool(Position position, string name)
         {
-            throw new System.NotImplementedException();
+            return new SpawningPool(position, name);
         }
     }
 }
