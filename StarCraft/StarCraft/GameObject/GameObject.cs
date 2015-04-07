@@ -39,7 +39,7 @@
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("Game object mineral cost should be greater by zero");
+                    throw new ArgumentOutOfRangeException(string.Format("{0} mineral cost should be greater by zero", this.GetType().Name));
                 }
 
                 this.mineralCost = value;
@@ -57,7 +57,7 @@
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Game object gas cost should be greater by zero");
+                    throw new ArgumentOutOfRangeException(string.Format("{0} gas cost should be greater by zero", this.GetType().Name));
                 }
 
                 this.gasCost = value;
@@ -75,7 +75,7 @@
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("Game object slote should be greater by zero");
+                    throw new ArgumentOutOfRangeException(string.Format("{0} slote should be greater by zero", this.GetType().Name));
                 }
 
                 this.sloteTakes = value;
