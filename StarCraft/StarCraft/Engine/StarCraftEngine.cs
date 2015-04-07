@@ -47,19 +47,9 @@
                 Thread.Sleep(200);
 
                 this.userInterface.ProcessInput();
-                if (!this.output.IsEmpty())
-                {
-                    userInterface.VisualaseInformation(this.output.ToString().TrimEnd());
-                    this.output.Clear();
-                }
+                this.LogGameInfo();
                 this.Update(this.playerOne, this.playerTwo);
-              //  this.Update(this.playerTwo, this.playerOne);
-
-                if (!this.output.IsEmpty())
-                {
-                    userInterface.VisualaseInformation(this.output.ToString().TrimEnd());
-                    this.output.Clear();
-                }
+                this.LogGameInfo();
                 this.Update(this.playerTwo, this.playerOne);
             }
         }
@@ -267,6 +257,15 @@
             var fighter = unit as IFighter;
             fighter.ResponseToAttackCommand(unitToAttack);
             this.output.AppendLine(string.Format(CommandsConstant.AttackMessage, fighter.Name, fighter.AttackDmg, unitToAttack.Name));
+        }
+
+        private void LogGameInfo()
+        {
+            if (!this.output.IsEmpty())
+            {
+                userInterface.VisualaseInformation(this.output.ToString().TrimEnd());
+                this.output.Clear();
+            }
         }
     }
 }
