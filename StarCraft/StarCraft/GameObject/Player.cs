@@ -3,11 +3,12 @@
     using System.Collections.Generic;
 
     using StarCraft.Interfaces;
+    using StarCraft.Common;
 
-    // TODO Defencive programming
     public class Player : IPlayer
     {
         private string name;
+        private Position position;
         private int emptySlots;
         private int fullSlots;
         private int mineral;
@@ -21,9 +22,9 @@
             this.Name = name;
             this.RaceType = raceType;
             this.Position = position;
-            this.gameObjects = new List<IGameObject>();
-            this.fighters = new List<IFighter>();
-            this.gatherers = new List<IGatherer>();
+            this.GameObjects = new List<IGameObject>();
+            this.Fighters = new List<IFighter>();
+            this.Gatherers = new List<IGatherer>();
         }
 
         public string Name
@@ -35,13 +36,26 @@
 
             private set
             {
+                Validator.CheckStringIsNullOrEmpty(value, "Player name cannot be null or empty");
                 this.name = value;
             }
         }
 
         public RaceType RaceType { get; private set; }
 
-        public Position Position { get; private set; }
+        public Position Position
+        {
+            get
+            {
+                return this.position;
+            }
+            private set
+            {
+                Validator.CheckValueIsNegativ(value.X, "Player positin X cannot be negativ value");
+                Validator.CheckValueIsNegativ(value.Y, "Player positin Y cannot be negativ value");
+                this.position = value;
+            }
+        }
 
         public int EmptySlots
         {
@@ -52,6 +66,7 @@
 
             private set
             {
+                Validator.CheckValueIsNegativ(value, "Player empty sloats cannot be negativ value");
                 this.emptySlots = value;
             }
         }
@@ -65,6 +80,7 @@
 
             private set
             {
+                Validator.CheckValueIsNegativ(value, "Player full sloats cannot be negativ value");
                 this.fullSlots = value;
             }
         }
@@ -78,6 +94,7 @@
 
             private set
             {
+                Validator.CheckValueIsNegativ(value, "Player mineral cannot be negativ value");
                 this.mineral = value;
             }
         }
@@ -91,6 +108,7 @@
 
             set
             {
+                Validator.CheckValueIsNegativ(value, "Player gas cannot be negativ value");
                 this.gas = value;
             }
         }
@@ -104,11 +122,12 @@
 
             private set
             {
+                Validator.CheckObjectIsNull(value);
                 this.gameObjects = value;
             }
         }
 
-        public ICollection<IFighter> Fighter
+        public ICollection<IFighter> Fighters
         {
             get
             {
@@ -117,11 +136,12 @@
 
             private set
             {
+                Validator.CheckObjectIsNull(value);
                 this.fighters = value;
             }
         }
 
-        public ICollection<IGatherer> Gatherer
+        public ICollection<IGatherer> Gatherers
         {
             get
             {
@@ -130,6 +150,7 @@
 
             private set
             {
+                Validator.CheckObjectIsNull(value);
                 this.gatherers = value;
             }
         }
