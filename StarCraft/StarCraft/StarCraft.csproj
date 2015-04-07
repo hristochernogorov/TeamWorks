@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomAttributes\AuthorAttribute.cs" />
+    <Compile Include="Engine\BuildingFactory.cs" />
     <Compile Include="Engine\CommandsConstant.cs" />
     <Compile Include="Engine\StarCraftEngine.cs" />
     <Compile Include="Engine\UnitFactory.cs" />
