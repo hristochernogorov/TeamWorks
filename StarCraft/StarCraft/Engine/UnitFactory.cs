@@ -68,6 +68,37 @@
         {
             return new Zergling(position, name);
         }
+
+
+        public Building CreateGateway(Position position, string name)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Building CreateNexus(Position position, string name)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Building CreateBarracks(Position position, string name)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Building CreateCommandCenter(Position position, string name)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Building CreateHatchery(Position position, string name)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Building CreateSpawningPool(Position position, string name)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 
