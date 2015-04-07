@@ -2,7 +2,7 @@
 {
     using Interfaces;
 
-    public class Gatherer : Unit, IGatherer
+    public abstract class Gatherer : Unit, IGatherer
     {
         private ResourceType collectedResourceType;
 

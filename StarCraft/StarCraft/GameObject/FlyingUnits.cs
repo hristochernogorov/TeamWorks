@@ -4,7 +4,7 @@
     using System.Linq;
     using Interfaces;
 
-    public class FlyingUnits : Unit
+    public abstract class FlyingUnits : Unit
     {
         public FlyingUnits(Position position, string name, int mineralCost, int gasCost, int sloat, int health, int attackDmg, RaceType race, UnitType unitType = UnitType.Pedestrian)
             : base(position, name, mineralCost, gasCost, sloat, health, attackDmg, race, UnitType.Flying)

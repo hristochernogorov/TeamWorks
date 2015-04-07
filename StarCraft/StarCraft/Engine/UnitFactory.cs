@@ -45,6 +45,11 @@
             return new Zealot(position, name);
         }
 
+        public IFighter CreateVoidRay(Position position, string name)
+        {
+            return new VoidRay(position, name);
+        }
+
         public IFighter CreateFirebat(Position position, string name)
         {
             return new Firebat(position, name);
@@ -54,14 +59,27 @@
         {
             return new Goliath(position, name);
         }
+
         public IFighter CreateMarine(Position position, string name)
         {
             return new Marine(position, name);
         }
+
+        public IFighter CreateBattlecruiser(Position position, string name)
+        {
+            return new Battlecruiser(position, name);
+        }
+
         public IFighter CreateGuardian(Position position, string name)
         {
             return new Guardian(position, name);
         }
+
+        public IFighter CreateMutalisk(Position position, string name)
+        {
+            return new Mutalisk(position, name);
+        }
+
         public IFighter CreateHydralisk(Position position, string name)
         {
             return new Hydralisk(position, name);
