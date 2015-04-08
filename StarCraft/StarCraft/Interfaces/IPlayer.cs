@@ -25,5 +25,6 @@
         void RemoveFullSlotsSlots(int slot);
         void AddGameObject(IGameObject gameObject);
         void RemoveDestroyGameObject();
+        string PrintInfo();
     }
 }

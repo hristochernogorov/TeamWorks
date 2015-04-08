@@ -2,6 +2,8 @@
 {
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
+
     using StarCraft.Interfaces;
     using StarCraft.Common;
 
@@ -176,8 +178,15 @@
 
         public string PrintInfo()
         {
-            return "not implementet yet";
-            //throw new System.NotImplementedException();
+            StringBuilder result = new StringBuilder();
+            result.AppendLine(string.Format("Name: {0}, Race: {1}, minerals: {2}, gas: {3}, population: {4}",this.Name, this.RaceType, this.Mineral, this.Gas, this.FullSlots));
+            result.AppendLine("Units: [");
+            foreach (var unit in this.gameObjects)
+            {
+                result.AppendLine(unit.ToString());
+            }
+            result.AppendLine("]");
+            return result.ToString();
         }
     }
 }
