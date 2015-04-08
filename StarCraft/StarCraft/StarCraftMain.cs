@@ -9,6 +9,8 @@
     {
         public static void Main()
         {
+            var printStartMenu = new StartMenu();
+            
             var keyboard = new UserInterfacecs();
 
             StarCraftEngine engine = new StarCraftEngine(new Player("a", RaceType.Protoss, Position.Parse("1,1")),

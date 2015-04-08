@@ -59,6 +59,7 @@
     <Compile Include="GameObject\FlyingUnits.cs" />
     <Compile Include="GameObject\GameObject.cs" />
     <Compile Include="GameObject\Gatherer.cs" />
+    <Compile Include="GameObject\StartMenu.cs" />
     <Compile Include="GameObject\UserInterfacecs.cs" />
     <Compile Include="GameObject\Player.cs" />
     <Compile Include="GameObject\Position.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Interfaces\IGatherer.cs" />
     <Compile Include="Interfaces\IMovable.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="Interfaces\IPrint.cs" />
     <Compile Include="Interfaces\IUnitFactory.cs" />
     <Compile Include="Interfaces\IUserInterfacecs.cs" />
     <Compile Include="StarCraftMain.cs" />
