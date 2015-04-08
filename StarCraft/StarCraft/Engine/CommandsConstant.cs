@@ -24,7 +24,7 @@
 
         public const string IsDeadkMessage = "{0} {1} is destroy!";
         public const string GoToPositionkMessage = "{0} is on position {1}!";
-        public const string AttackMessage = "{0} make {1} damege to {2}!";
+        public const string AttackMessage = "{0} make {1} damage to {2}!";
 
         // CreateCommandSyntax = "player create <unit type> <unit name> <unit name> ";
         //player1 create worker probe gosho
@@ -36,5 +36,9 @@
 
         // CreateCommandSyntax = "player <unit name> goto position(0 0) ";
         //player1 pesho goto (1 1)
+
+        //Display info command:
+        //player1 info
+
     }
 }
