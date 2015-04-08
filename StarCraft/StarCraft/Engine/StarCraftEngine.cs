@@ -3,10 +3,9 @@
     using System;
     using System.Linq;
     using System.Reflection;
-    using System.Security.Cryptography.X509Certificates;
     using System.Text;
     using System.Threading;
-
+    using CustomExceptions;
     using StarCraft.GameObject;
     using StarCraft.Interfaces;
     using StarCraft.Extensions;
@@ -16,6 +15,7 @@
         private const int MineralPerCycle = 8;
         private const int GasPerCycle = 8;
         private const int InitWorkercount = 4;
+        private const int ThreadSleep = 500;
 
         private IPlayer playerOne;
         private IPlayer playerTwo;
@@ -44,7 +44,7 @@
         {
             while (true)
             {
-                Thread.Sleep(200);
+                Thread.Sleep(ThreadSleep);
 
                 this.userInterface.ProcessInput();
                 this.LogGameInfo();
@@ -141,6 +141,10 @@
                         break;
                 }
             }
+            catch (InvalidCommandException e)
+            {
+                this.output.Append(e.Message);
+            }
             catch (Exception e)
             {
                 this.output.Append(e.Message);
@@ -164,8 +168,10 @@
                     this.ProceedCollectCommand(command, player);
                     break;
                 case CommandsConstant.PrintInfo:
-                    this.ProceedPrintInfo(command, player);
+                    this.ProceedPrintInfo(player);
                     break;
+                default:
+                    throw new InvalidCommandException(CommandsConstant.InvalidCommand);
 
             }
         }
@@ -214,18 +220,18 @@
             catch (Exception)
             {
 
-                throw new Exception(CommandsConstant.InvalidCommand);
+                throw new InvalidCommandException(CommandsConstant.InvalidCommand);
             }
 
             if (result != null && player.RaceType == result.Race)
             {
                 if (player.Gas < result.GasCost)
                 {
-                    throw new ArgumentException(CommandsConstant.NoGas);
+                    throw new InvalidCommandException(CommandsConstant.NoGas);
                 }
                 if (player.Mineral < result.MineralCost)
                 {
-                    throw new Exception(CommandsConstant.NoMinerals);
+                    throw new InvalidCommandException(CommandsConstant.NoMinerals);
                 }
 
                 player.GetGas(result.GasCost);
@@ -240,22 +246,9 @@
             }
         }
 
-        private void ProceedPrintInfo(string[] command, IPlayer player)
+        private void ProceedPrintInfo(IPlayer player)
         {
-            string result;
-
-            try
-            {
-                result = player.PrintInfo();
-            }
-            catch (Exception)
-            {
-
-                throw new Exception(CommandsConstant.InvalidCommand);
-            }
-
-               
-            //TODO: to append to output 
+            this.output.Append(player.PrintInfo());
         }
 
         private string GetMethodName(string[] command)
@@ -273,7 +266,7 @@
             var unitToAttack = opositePlayer.GameObjects.FirstOrDefault(f => f.Name == command[3]);
             if (unit == null || unitToAttack == null)
             {
-                throw new Exception(CommandsConstant.InvalidCommand);
+                throw new InvalidCommandException(CommandsConstant.InvalidCommand);
             }
             var fighter = unit as IFighter;
             fighter.ResponseToAttackCommand(unitToAttack);

@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Common\Validator.cs" />
     <Compile Include="CustomAttributes\AuthorAttribute.cs" />
+    <Compile Include="CustomExceptions\InvalidCommandException.cs" />
     <Compile Include="Engine\CommandsConstant.cs" />
     <Compile Include="Engine\StarCraftEngine.cs" />
     <Compile Include="Engine\UnitFactory.cs" />
