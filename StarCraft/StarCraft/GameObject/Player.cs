@@ -172,5 +172,12 @@
         {
             this.gameObjects = this.GameObjects.Where(g => g.IsAlive()).ToList();
         }
+
+
+        public string PrintInfo()
+        {
+            return "not implementet yet";
+            //throw new System.NotImplementedException();
+        }
     }
 }

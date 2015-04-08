@@ -8,6 +8,7 @@
         public const string Attack = "attack";
         public const string GoTo = "goto";
         public const string Collect = "collect";
+        public const string PrintInfo = "info";
 
         public const string Minerals = "minerals";
         public const string Gas = "gas";

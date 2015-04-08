@@ -163,6 +163,9 @@
                 case CommandsConstant.Collect:
                     this.ProceedCollectCommand(command, player);
                     break;
+                case CommandsConstant.PrintInfo:
+                    this.ProceedPrintInfo(command, player);
+                    break;
 
             }
         }
@@ -235,6 +238,24 @@
                     worker.CollectResources(ResourceType.Minerals);
                 }
             }
+        }
+
+        private void ProceedPrintInfo(string[] command, IPlayer player)
+        {
+            string result;
+
+            try
+            {
+                result = player.PrintInfo();
+            }
+            catch (Exception)
+            {
+
+                throw new Exception(CommandsConstant.InvalidCommand);
+            }
+
+               
+            //TODO: to append to output 
         }
 
         private string GetMethodName(string[] command)
