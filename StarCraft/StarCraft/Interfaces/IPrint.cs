@@ -1,6 +1,8 @@
-﻿using System.Text;
-namespace StarCraft.Interfaces
+﻿namespace StarCraft.Interfaces
 {
+    using StarCraft.CustomAttributes;
+
+    [Author("Ilian Bratanov")]
     public interface IPrint
     {
         void Print();
