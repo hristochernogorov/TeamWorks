@@ -82,7 +82,7 @@
 
         public override string ToString()
         {
-            return "not implemented yet";
+            return string.Format("{0} {1} Health: {2}; Attack Demage: {3}", this.GetType().Name, this.Name, this.Health, this.attackDmg);
         }
     }
 }
