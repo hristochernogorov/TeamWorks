@@ -1,4 +1,2 @@
 # Project_Conflux
-TeamWork_OOP
-
-Ilian Bratanov!!!
+StarCraft Game - OOP principles
